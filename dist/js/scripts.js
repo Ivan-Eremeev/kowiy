@@ -91,18 +91,18 @@ $(document).ready(function () {
 	// };
 	// menuScroll();
 
-	// // Stiky menu // Липкое меню.
-	// function stikyMenu(header) {
-	// 	headerTop = header.offset().top;
-	// 	$(window).scroll(function(){
-	// 		if( $(window).scrollTop() > headerTop ) {
-	// 			header.addClass('stiky');
-	// 		} else {
-	// 			header.removeClass('stiky');
-	// 		}
-	// 	});
-	// };
-	// stikyMenu();
+	// Stiky menu // Липкое меню.
+	function stikyMenu(header) {
+		headerTop = header.offset().top;
+		$(window).scroll(function(){
+			if( $(window).scrollTop() > headerTop + 150) {
+				header.addClass('stiky');
+			} else if ($(window).scrollTop() < headerTop + 5) {
+				header.removeClass('stiky');
+			}
+		});
+	};
+	stikyMenu($('#header'));
 
 	// // Изменяет размер шрифта у тэга html взависимости от размера экрана (для резиновых страниц)(размеры должны быть в em)
 	// function fontResize() {
@@ -397,7 +397,7 @@ $(document).ready(function () {
 				if (!revers) {
 					revers = false;
 				}
-				$this.css({ transition: (speed / 1000) + 's' });
+				$this.css({ transition: (speed / 1000) + 's ease-out'});
 				$window.mousemove(function (event) {
 					var left = event.clientX,
 						top = event.clientY,
@@ -714,6 +714,7 @@ $(document).ready(function () {
 		close.on('click', function () {
 			$('[data-drop="' + $(this).data('drop') + '"]').removeClass('active');
 			$('#' + $(this).data('drop')).removeClass('open');
+			body.removeClass('lock');
 		})
 	}
 	dropBlock($('.js-menu-btn'));
@@ -766,5 +767,24 @@ $(document).ready(function () {
 
 	// }
 	// replace($('#block'), $('#to'), $('#from'), breakLg);
+
+	// Swiper Slider
+	const vacanciesSlider = new Swiper('#vacanciesSlider', {
+		slidesPerView: 1,
+		spaceBetween: 8,
+		navigation: {
+			nextEl: '.vacancies__arrow--next',
+			prevEl: '.vacancies__arrow--prev',
+		},
+		breakpoints: {
+			500: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			768: {
+				slidesPerView: 3,
+			}
+		}
+	});
 
 });

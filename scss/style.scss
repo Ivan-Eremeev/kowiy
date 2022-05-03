@@ -57,7 +57,7 @@ $break_xs: 500px;
 // @import 'bootstrap/bootstrap'; // Подключение бутстрап
 
 // Шрифты
-@include font-face("ST-SimpleSquare", "../fonts/ST-SimpleSquare", normal, normal);
+@include font-face("ST-SimpleSquare", "../fonts/STSimpleSquare", normal, normal);
 @include font-face("SF UI Display", "../fonts/SFUIDisplayRegular", normal, normal);
 @include font-face("SF UI Display", "../fonts/SFUIDisplayMedium", 500, normal);
 @include font-face("SF UI Display", "../fonts/SFUIDisplaySemibold", 600, normal);
@@ -74,6 +74,8 @@ $color_secondary: #FF8A00;
 @import 'blocks/header';
 @import 'blocks/menu';
 @import 'blocks/welcome';
+@import 'blocks/vacancies';
+@import 'blocks/features';
 // @import 'blocks/accordion';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

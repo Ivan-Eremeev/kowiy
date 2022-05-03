@@ -1,0 +1,37 @@
+.features {
+  font-size: 24px;
+  &__col {
+    @include col(4);
+    @include col-sm(6);
+    @include col-xs(12);
+  }
+  &__item {
+    height: 100%;
+    padding: 38px 45px 45px;
+    border: 2px solid $color_text;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+  }
+  &__title {
+    font-family: "ST-SimpleSquare", sans-serif;
+    margin-bottom: 4px;
+  }
+  &__text {
+    font-weight: 500;
+  }
+  @media (max-width: $break_md) {
+    &__item {
+      padding: 20px 10px;
+      font-size: 18px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__title {
+      font-size: 16px;
+    }
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

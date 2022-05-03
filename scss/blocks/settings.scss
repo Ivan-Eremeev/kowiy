@@ -61,6 +61,12 @@ body {
 }
 .row {
   @include row-flex();
+  &.gy {
+    margin-top: $gutter * -1;
+    > * {
+      padding-top: $gutter;
+    }
+  }
 }
 .wrapper {
   @include wrapper();
@@ -84,5 +90,13 @@ body {
   // @media (max-width: $break_md) {
   //   padding-top: 49px;
   // }
+}
+.title {
+  font-family: "ST-SimpleSquare", sans-serif;
+  font-size: 36px;
+  line-height: 1.4;
+  @media (max-width: $break_sm) {
+    font-size: 20px;
+  }
 }
 /* /settings */

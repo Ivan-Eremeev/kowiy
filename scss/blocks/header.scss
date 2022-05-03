@@ -4,6 +4,7 @@
   background-color: $color_text;
   position: absolute;
   z-index: 20;
+  transition: 0.3s;
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -88,5 +89,30 @@
     .wrapper {
       max-width: 1520px+$offset-sm * 2;
     }
+  }
+}
+
+@keyframes showStyky {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+// stiky menu
+#header {
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+
+  &.stiky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: showStyky 0.5s;
   }
 }

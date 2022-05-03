@@ -7,6 +7,7 @@
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -39,13 +40,12 @@
 			</header>
 			<!-- /header-->
 			<div class="content">
-				<!-- welcome -->
-				<div class="welcome"> 
+				<section class="welcome"> 
 					<div class="welcome__bg"> <img src="img/welcome_bg.jpg" alt=""></div>
-					<div class="welcome__cube-1"><img class="js-parallaxMouse" src="img/cube.svg" alt=""></div>
-					<div class="welcome__cube-2"><img class="js-parallaxMouse" src="img/cube.svg" alt=""></div>
-					<div class="welcome__cube-3"><img class="js-parallaxMouse" src="img/cube.svg" alt=""></div>
-					<div class="welcome__cube-4"><img class="js-parallaxMouse" src="img/cube.svg" alt="" data-revers="true"></div>
+					<div class="welcome__cube-1"><img class="js-parallaxMouse" src="img/cube.svg" alt="" data-speed="1000"></div>
+					<div class="welcome__cube-2"><img class="js-parallaxMouse" src="img/cube.svg" alt="" data-speed="1000"></div>
+					<div class="welcome__cube-3"><img class="js-parallaxMouse" src="img/cube.svg" alt="" data-speed="1000"></div>
+					<div class="welcome__cube-4"><img class="js-parallaxMouse" src="img/cube.svg" alt="" data-speed="1000" data-revers="true"></div>
 					<div class="wrapper"> 
 						<div class="welcome__content"> 
 							<div class="welcome__logo"> 
@@ -53,14 +53,115 @@
 									<source media="(max-width: 768px)" srcset="img/logo_welcome-mob.svg"><img src="img/logo_welcome.svg" alt="">
 								</picture>
 							</div>
-							<div class="welcome__title">делаем игру с любовью</div>
+							<h1 class="welcome__title">делаем игру с любовью</h1>
 							<div class="welcome__buttons"> <a class="btn btn--fill" href="#">ЧТО ЗА ИГРА?</a>
 								<div class="btn btn--border">Написать нам</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!--	/welcome -->
+				</section>
+				<section class="vacancies">
+					<div class="wrapper"> 
+						<div class="vacancies__head"> 
+							<h2 class="title">Приглашаем <br>в нашу команду</h2>
+							<div class="vacancies__arrows"> 
+								<div class="vacancies__arrow vacancies__arrow--prev swiper-button-prev"><svg width="22" height="36" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.6782 35.3554L21.9208 31.1127L4.24316 13.4351L0.000522774 17.6777L17.6782 35.3554Z"/>
+<path d="M21.9213 4.24271L17.6786 6.51479e-05L0.000976562 17.6777L4.24362 21.9204L21.9213 4.24271Z"/>
+</svg>
+								</div>
+								<div class="vacancies__arrow vacancies__arrow--next swiper-button-next"><svg width="22" height="36" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.24368 35.3554L0.00104171 31.1127L17.6787 13.4351L21.9214 17.6777L4.24368 35.3554Z"/>
+<path d="M0.000586431 4.24271L4.24323 6.51479e-05L21.9209 17.6777L17.6783 21.9204L0.000586431 4.24271Z"/>
+</svg>
+								</div>
+							</div>
+						</div>
+						<div class="vacancies__slider" id="vacanciesSlider"> 
+							<div class="swiper-wrapper"> 
+								<div class="swiper-slide"> 
+									<div class="vacancies__item"> 
+										<div class="vacancies__place">
+											<ul> 
+												<li>Москва</li>
+												<li>Удалённо</li>
+											</ul>
+										</div>
+										<div class="vacancies__title">Level Designer</div>
+										<div class="vacancies__text">Мы ищем ещё одного гейм-дизайнера, которому сможем полностью доверить создание новых захватывающих экспедиций. Вашу работу увидит весь мир - ответственное и волнительное дело. Готовы создавать целые миры?</div>
+										<div class="vacancies__btn"> 
+											<div class="btn btn--border">ХОЧУ РАБОТАТЬ</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide"> 
+									<div class="vacancies__item"> 
+										<div class="vacancies__place">
+											<ul> 
+												<li>Удалённо</li>
+											</ul>
+										</div>
+										<div class="vacancies__title">Data Engineer</div>
+										<div class="vacancies__text">Vы стремимся к тому, чтобы аналитика была неотъемлемой частью всех наших процессови являлась опорой для принятия важных для компании решений. Именно поэтомумы ищем крутого Data Engineer! </div>
+										<div class="vacancies__btn"> 
+											<div class="btn btn--border">ХОЧУ РАБОТАТЬ</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide"> 
+									<div class="vacancies__item"> 
+										<div class="vacancies__place">
+											<ul> 
+												<li>Дубай</li>
+											</ul>
+										</div>
+										<div class="vacancies__title">TechOps Engineer</div>
+										<div class="vacancies__text">Можешь найти ошибку там, где её никто не видит? Одно твоё слово останавливает панику, когда двести человек кричат «всё упало, помогите»? Если это про тебя — ты прирождённый TechOps-инженер.</div>
+										<div class="vacancies__btn"> 
+											<div class="btn btn--border">ХОЧУ РАБОТАТЬ</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide"> 
+									<div class="vacancies__item"> 
+										<div class="vacancies__place">
+											<ul> 
+												<li>Дубай</li>
+											</ul>
+										</div>
+										<div class="vacancies__title">TechOps Engineer</div>
+										<div class="vacancies__text">Можешь найти ошибку там, где её никто не видит? Одно твоё слово останавливает панику, когда двести человек кричат «всё упало, помогите»? Если это про тебя — ты прирождённый TechOps-инженер.</div>
+										<div class="vacancies__btn"> 
+											<div class="btn btn--border">ХОЧУ РАБОТАТЬ</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="features">
+							<div class="row gy">
+								<div class="features__col"> 
+									<div class="features__item"> 
+										<div class="features__title">Условия</div>
+										<div class="features__text">Работа удалённо или в офисах в Москве и Дубае</div>
+									</div>
+								</div>
+								<div class="features__col"> 
+									<div class="features__item"> 
+										<div class="features__title">Процесс</div>
+										<div class="features__text">Помогаем сотрудникам, прокачиваем и поощряем</div>
+									</div>
+								</div>
+								<div class="features__col"> 
+									<div class="features__item"> 
+										<div class="features__title">Награда</div>
+										<div class="features__text">Вся команда пожинает плоды кропотливого труда</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 			<!-- footer-->
 			<footer class="footer"> 
@@ -69,6 +170,7 @@
 			<!-- /footer-->
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/swiper-bundle.min.js"> </script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

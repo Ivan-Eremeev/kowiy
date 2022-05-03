@@ -3,17 +3,6 @@ extends blocks/base.pug
 block title 
 	title Главная
 
-block style-libs
-	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
-	//- link(rel="stylesheet", href="css/libs/fullpage.css")
-	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
-	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
-	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
-	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
-	//- link(rel="stylesheet", href="css/libs/slick.css")
-	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
-	//- link(rel="stylesheet", href="css/libs/aos.css")
-
 block content
 
 	.page
@@ -22,46 +11,101 @@ block content
 		
 		.content
 
-			// welcome 
-			.welcome 
+			section.welcome 
+
 				.welcome__bg 
 					img(src="img/welcome_bg.jpg", alt="")
 				.welcome__cube-1
-					img(src="img/cube.svg", alt="").js-parallaxMouse
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000")
 				.welcome__cube-2
-					img(src="img/cube.svg", alt="").js-parallaxMouse
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000")
 				.welcome__cube-3
-					img(src="img/cube.svg", alt="").js-parallaxMouse
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000")
 				.welcome__cube-4
-					img(src="img/cube.svg", alt="").js-parallaxMouse(data-revers="true")
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000" data-revers="true")
+
 				.wrapper 
 					.welcome__content 
 						.welcome__logo 
 							picture 
 								source(media="(max-width: 768px)", srcset="img/logo_welcome-mob.svg")
 								img(src="img/logo_welcome.svg", alt="")
-						.welcome__title делаем игру с любовью
+						h1.welcome__title делаем игру с любовью
 						.welcome__buttons 
 							a(href="#").btn.btn--fill ЧТО ЗА ИГРА?
 							.btn.btn--border Написать нам
-			//	/welcome 
+
+			section.vacancies
+				.wrapper 
+
+					.vacancies__head 
+						h2.title Приглашаем <br>в нашу команду
+						.vacancies__arrows 
+							.vacancies__arrow.vacancies__arrow--prev.swiper-button-prev
+								<svg width="22" height="36" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M17.6782 35.3554L21.9208 31.1127L4.24316 13.4351L0.000522774 17.6777L17.6782 35.3554Z"/>
+									<path d="M21.9213 4.24271L17.6786 6.51479e-05L0.000976562 17.6777L4.24362 21.9204L21.9213 4.24271Z"/>
+								</svg>
+
+							.vacancies__arrow.vacancies__arrow--next.swiper-button-next
+								<svg width="22" height="36" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.24368 35.3554L0.00104171 31.1127L17.6787 13.4351L21.9214 17.6777L4.24368 35.3554Z"/>
+									<path d="M0.000586431 4.24271L4.24323 6.51479e-05L21.9209 17.6777L17.6783 21.9204L0.000586431 4.24271Z"/>
+								</svg>
+
+					#vacanciesSlider.vacancies__slider 
+						.swiper-wrapper 
+							.swiper-slide 
+								.vacancies__item 
+									.vacancies__place
+										ul 
+											li Москва
+											li Удалённо
+									.vacancies__title Level Designer
+									.vacancies__text Мы ищем ещё одного гейм-дизайнера, которому сможем полностью доверить создание новых захватывающих экспедиций. Вашу работу увидит весь мир - ответственное и волнительное дело. Готовы создавать целые миры?
+									.vacancies__btn 
+										.btn.btn--border ХОЧУ РАБОТАТЬ
+							.swiper-slide 
+								.vacancies__item 
+									.vacancies__place
+										ul 
+											li Удалённо
+									.vacancies__title Data Engineer
+									.vacancies__text Vы стремимся к тому, чтобы аналитика была неотъемлемой частью всех наших процессови являлась опорой для принятия важных для компании решений. Именно поэтомумы ищем крутого Data Engineer! 
+									.vacancies__btn 
+										.btn.btn--border ХОЧУ РАБОТАТЬ
+							.swiper-slide 
+								.vacancies__item 
+									.vacancies__place
+										ul 
+											li Дубай
+									.vacancies__title TechOps Engineer
+									.vacancies__text Можешь найти ошибку там, где её никто не видит? Одно твоё слово останавливает панику, когда двести человек кричат «всё упало, помогите»? Если это про тебя — ты прирождённый TechOps-инженер.
+									.vacancies__btn 
+										.btn.btn--border ХОЧУ РАБОТАТЬ
+							.swiper-slide 
+								.vacancies__item 
+									.vacancies__place
+										ul 
+											li Дубай
+									.vacancies__title TechOps Engineer
+									.vacancies__text Можешь найти ошибку там, где её никто не видит? Одно твоё слово останавливает панику, когда двести человек кричат «всё упало, помогите»? Если это про тебя — ты прирождённый TechOps-инженер.
+									.vacancies__btn 
+										.btn.btn--border ХОЧУ РАБОТАТЬ
+
+					.features
+						.row.gy
+							.features__col 
+								.features__item 
+									.features__title Условия
+									.features__text Работа удалённо или в офисах в Москве и Дубае
+							.features__col 
+								.features__item 
+									.features__title Процесс
+									.features__text Помогаем сотрудникам, прокачиваем и поощряем
+							.features__col 
+								.features__item 
+									.features__title Награда
+									.features__text Вся команда пожинает плоды кропотливого труда
 
 		include blocks/footer.pug
-
-block js-libs
-	script(src="js/libs/jquery.min.js")
-	//- script(src="js/libs/jquery.fancybox.min.js")
-	//- script(src="js/libs/slick.min.js")
-	//- script(src="js/libs/jquery.matchHeight-min.js")
-	//- script(src="js/libs/jquery.inputmask.min.js")
-	//- script(src="js/libs/autosize.min.js")
-	//- script(src="js/libs/tooltipster.bundle.min.js")
-	//- script(src="js/libs/jquery.mmenu.min.all.js")
-	//- script(src="js/libs/fullpage.min.js")
-	//- script(src="js/libs/jquery.vide.min.js")
-	//- script(src="js/libs/jquery.scrollbar.min.js")
-	//- script(src="js/libs/aos.js")
-	//- script(src="js/libs/circle-progress.min.js")
-	//- script(src="js/libs/bootstrap.bundle.min.js") 
-	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
-	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")
