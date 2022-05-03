@@ -13,6 +13,7 @@
 		justify-content: center;
 		align-items: center;
 		font-size: 16px;
+		font-weight: 600;
 		text-transform: uppercase;
 		margin-left: -42px;
 		li {
@@ -35,6 +36,7 @@
 		display: flex;
 		margin-left: 80px;
 		font-size: 16px;
+		font-weight: 600;
 		color: #A3A3A3;
 		li {
 			cursor: pointer;
@@ -88,6 +90,10 @@
 			}
 			a {
 				margin: 0;
+				color: #747474;
+				&.active {
+					color: $color_text;
+				}
 			}
 		}
 		&__lang {
@@ -101,7 +107,7 @@
 			bottom: 0;
 			left: 0;
 			right: 0;
-			background-color: rgba(255,255,255,.4);
+			background-color: rgba(255,255,255,.7);
 			opacity: 0;
 			visibility: hidden;
 			transition: 0.3s;

@@ -27,6 +27,8 @@
     margin-bottom: 34px;
     img {
       display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   &__title {
@@ -73,11 +75,15 @@
       width: 200px;
       top: 40px;
     }
+    &__cube-2 {
+      width: 150px;
+    }
     &__cube-4 {
       display: none;
     }
   }
   @media (max-width: $break_sm) {
+    padding: 272px 0 203px;
     &__cube-1 {
       width: 70px;
       top: 60px;
@@ -88,7 +94,28 @@
       width: 123px;
       transform: rotate(-1deg);
       top: 45px;
-      right: -22%;
+      right: -74px;
+    }
+    &__cube-3 {
+      width: 140px;
+      transform: rotate(-45deg);
+      left: 0;
+      bottom: -37px;
+    }
+    &__logo {
+      margin-bottom: 67px;
+    }
+    &__title {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    &__buttons {
+      .btn {
+        flex: 1 0 auto;
+        margin: 0 7px;
+        padding: 8px 15px;
+        font-size: 11px;
+      }
     }
   }
 }

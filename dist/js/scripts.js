@@ -434,7 +434,7 @@ $(document).ready(function () {
 			});
 		}
 	};
-	// parallaxMove($('.js-parallaxMouse'));
+	parallaxMove($('.js-parallaxMouse'));
 
 	// // Показать еще новости
 	// function limitBlock(wrap, newsNum) {

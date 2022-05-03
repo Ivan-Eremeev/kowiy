@@ -37,7 +37,9 @@ block content
 				.wrapper 
 					.welcome__content 
 						.welcome__logo 
-							img(src="img/logo_welcome.svg", alt="")
+							picture 
+								source(media="(max-width: 768px)", srcset="img/logo_welcome-mob.svg")
+								img(src="img/logo_welcome.svg", alt="")
 						.welcome__title делаем игру с любовью
 						.welcome__buttons 
 							a(href="#").btn.btn--fill ЧТО ЗА ИГРА?
