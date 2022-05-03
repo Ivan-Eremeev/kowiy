@@ -28,46 +28,46 @@ $(document).ready(function () {
 	});
 
 	// Мобильное меню
-	function myMenu(menu) {
-		if (menu.length) {
-			menu.each(function () {
-				var $this = $(this),
-						menuBtn = $this.find('#menu-btn'),
-						over = $this.find('#menu-over'),
-						close = $this.find('#menu-close'),
-						body = $('body'),
-						scrollbarWidth;
-				menuBtn.on('click', toggleOpenMenu);
-				over.on('click', menuClose);
-				close.on('click', menuClose);
-				function menuOpen() { // Открывание меню
-					body.addClass('lock').css('padding-right', scrollbarWidth);
-					$this.addClass('open');
-					menuBtn.addClass('is-active');
-				}
-				function menuClose() { // Закрывание меню
-					body.removeClass('lock').css('padding-right', 0);
-					$this.removeClass('open');
-					menuBtn.removeClass('is-active');
-				}
-				function scrollbarWidthCalc() { // Вычисление ширины скролла
-					var documentWidth = parseInt(document.documentElement.clientWidth),
-							windowsWidth = parseInt(window.innerWidth);
-							scrollbarWidth = windowsWidth - documentWidth;
-				}
-				function toggleOpenMenu() { // Открывание/закрывание меню
-					if ($this.hasClass('open')) {
-						menuClose();
-					}else {
-						menuOpen();
-					}
-				}
-				scrollbarWidthCalc();
-				$(window).resize(scrollbarWidthCalc);
-			})
-		};
-	};
-	myMenu($('.js-menu'));
+	// function myMenu(menu) {
+	// 	if (menu.length) {
+	// 		menu.each(function () {
+	// 			var $this = $(this),
+	// 					menuBtn = $this.find('#menu-btn'),
+	// 					over = $this.find('#menu-over'),
+	// 					close = $this.find('#menu-close'),
+	// 					body = $('body'),
+	// 					scrollbarWidth;
+	// 			menuBtn.on('click', toggleOpenMenu);
+	// 			over.on('click', menuClose);
+	// 			close.on('click', menuClose);
+	// 			function menuOpen() { // Открывание меню
+	// 				body.addClass('lock').css('padding-right', scrollbarWidth);
+	// 				$this.addClass('open');
+	// 				menuBtn.addClass('is-active');
+	// 			}
+	// 			function menuClose() { // Закрывание меню
+	// 				body.removeClass('lock').css('padding-right', 0);
+	// 				$this.removeClass('open');
+	// 				menuBtn.removeClass('is-active');
+	// 			}
+	// 			function scrollbarWidthCalc() { // Вычисление ширины скролла
+	// 				var documentWidth = parseInt(document.documentElement.clientWidth),
+	// 						windowsWidth = parseInt(window.innerWidth);
+	// 						scrollbarWidth = windowsWidth - documentWidth;
+	// 			}
+	// 			function toggleOpenMenu() { // Открывание/закрывание меню
+	// 				if ($this.hasClass('open')) {
+	// 					menuClose();
+	// 				}else {
+	// 					menuOpen();
+	// 				}
+	// 			}
+	// 			scrollbarWidthCalc();
+	// 			$(window).resize(scrollbarWidthCalc);
+	// 		})
+	// 	};
+	// };
+	// myMenu($('.js-menu'));
 
 	// // Блок с высотой окна браузера
 	// function screenHeight(fullHeight) {
@@ -434,7 +434,7 @@ $(document).ready(function () {
 			});
 		}
 	};
-	parallaxMove($('.js-parallaxMouse'));
+	// parallaxMove($('.js-parallaxMouse'));
 
 	// // Показать еще новости
 	// function limitBlock(wrap, newsNum) {
@@ -662,31 +662,31 @@ $(document).ready(function () {
 	// Выпадайки при клике по кнопке
 	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
 	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
-	function dropBlock(btn) {
-		var $this = undefined,
-				drop = undefined,
-				close = $('.js-drop-close');
-		btn.on('click', function () {
-			$this = $(this);
-			drop = $('#' + $this.data('drop'));
-			$this.toggleClass('active');
-			drop.toggleClass('open');
-			$(document).mouseup(function (e) {
-				if (!$this.is(e.target)
-					&& $this.has(e.target).length === 0
-					&& !drop.is(e.target)
-					&& drop.has(e.target).length === 0) {
-					$this.removeClass('active');
-					drop.removeClass('open');
-				}
-			});
-		})
-		close.on('click', function () {
-			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('active');
-			$('#' + $(this).data('drop')).removeClass('open');
-		})
-	}
-	dropBlock($('.js-drop-btn'));
+	// function dropBlock(btn) {
+	// 	var $this = undefined,
+	// 			drop = undefined,
+	// 			close = $('.js-drop-close');
+	// 	btn.on('click', function () {
+	// 		$this = $(this);
+	// 		drop = $('#' + $this.data('drop'));
+	// 		$this.toggleClass('active');
+	// 		drop.toggleClass('open');
+	// 		$(document).mouseup(function (e) {
+	// 			if (!$this.is(e.target)
+	// 				&& $this.has(e.target).length === 0
+	// 				&& !drop.is(e.target)
+	// 				&& drop.has(e.target).length === 0) {
+	// 				$this.removeClass('active');
+	// 				drop.removeClass('open');
+	// 			}
+	// 		});
+	// 	})
+	// 	close.on('click', function () {
+	// 		$('[data-drop="' + $(this).data('drop') +'"]').removeClass('active');
+	// 		$('#' + $(this).data('drop')).removeClass('open');
+	// 	})
+	// }
+	// dropBlock($('.js-drop-btn'));
 
 	// Меню
 	function dropBlock(btn) {

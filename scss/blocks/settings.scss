@@ -95,6 +95,9 @@ body {
   font-family: "ST-SimpleSquare", sans-serif;
   font-size: 36px;
   line-height: 1.4;
+  span {
+    color: $color_secondary;
+  }
   @media (max-width: $break_sm) {
     font-size: 20px;
   }

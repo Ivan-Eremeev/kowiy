@@ -1,0 +1,150 @@
+.about {
+  padding: 118px 0 135px;
+  background: linear-gradient(180deg, rgba(172, 240, 255, 0) 28.12%, #ACF0FF 98.6%);
+  text-align: center;
+  position: relative;
+  &__content {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+  }
+  .title {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  &__sub {
+    font-weight: 500;
+    margin-bottom: 57px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  &__btn {
+    margin: 0 9px;
+    border-radius: 50px;
+    img {
+      display: block;
+    }
+    &:hover {
+      transform: translate(0,-1px);
+      box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    }
+  }
+  &__text {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  &__img {
+    margin-top: -73px;
+    margin-bottom: 23px;
+    position: relative;
+    z-index: 2;
+  }
+  &__cube-1 {
+    width: 220px;
+    position: absolute;
+    top: 23%;
+    left: 3%;
+    transform: rotate(265deg);
+  }
+  &__cube-2 {
+    width: 320px;
+    position: absolute;
+    top: 100px;
+    right: 4%;
+    transform: rotate(88deg);
+  }
+  &__cube-3 {
+    width: 250px;
+    position: absolute;
+    bottom: 22%;
+    right: -68px;
+    transform: rotate(46deg);
+  }
+  &__cube-4 {
+    display: none;
+  }
+  .features {
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: $break_lg) {
+    padding: 30px 0 44px;
+    &__cube-1 {
+      top: 20%;
+      left: -20px;
+    }
+    &__cube-2 {
+      width: 250px;
+      top: -20px;
+      right: -40px;
+    }
+    &__cube-3 {
+      bottom: -50px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    .title {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    &__sub {
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+    &__text {
+      font-size: 10px;
+      margin-bottom: 22px;
+    }
+    &__img {
+      margin-top: 0;
+    }
+    &__cube-1 {
+      width: 68px;
+      transform: rotate(48deg);
+      top: 18%;
+      left: -30px;
+    }
+    &__cube-2 {
+      width: 110px;
+      top: 17%;
+      right: -70px;
+      transform: rotate(0deg);
+    }
+    &__cube-3 {
+      width: 98px;
+      right: 10px;
+      transform: rotate(-102deg);
+      right: 1px;
+      bottom: -27px;
+    }
+    &__cube-4 {
+      display: block;
+      width: 140px;
+      position: absolute;
+      left: -30px;
+      bottom: 19%;
+      transform: rotate(-40deg);
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__buttons {
+      flex-wrap: wrap;
+      margin-bottom: 3px;
+    }
+    &__btn {
+      margin-bottom: 14px;
+    }
+    &__img {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+}

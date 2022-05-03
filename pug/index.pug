@@ -108,4 +108,46 @@ block content
 									.features__title Награда
 									.features__text Вся команда пожинает плоды кропотливого труда
 
+			section.about
+
+				.about__cube-1 
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000") 
+				.about__cube-2 
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000") 
+				.about__cube-3 
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000") 
+				.about__cube-4 
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000") 
+
+				.wrapper
+
+					.about__content
+						h2.title Представляем 
+							span нашу игру 
+							| Cubix
+						.about__sub Окунись в большой многопользовательский кубический мир, где ты будешь строить, сражаться с монстрами и находить друзей!
+						.about__buttons 
+							a(href="#").about__btn 
+								img(src="img/app_store.png", alt="")
+							a(href="#").about__btn 
+								img(src="img/google_play.png", alt="")
+						.about__text Устанавливая приложения вы принимаете пользовательское соглашение и договор офферы.
+					.about__img 
+						img(src="img/about.png", alt="")
+
+					.features
+						.row.gy
+							.features__col 
+								.features__item 
+									.features__title Открытый мир
+									.features__text Большой мир, в котором каждому найдется место
+							.features__col 
+								.features__item 
+									.features__title Комьюнити
+									.features__text Игроки действуют вместе и исследуют мир игры
+							.features__col 
+								.features__item 
+									.features__title Графика
+									.features__text Приятная и стильная графика в твоём телефоне
+
 		include blocks/footer.pug
