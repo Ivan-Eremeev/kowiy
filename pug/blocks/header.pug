@@ -1,0 +1,32 @@
+// header
+header.header#header
+	.wrapper
+
+			a(href="index.html").header__logo 
+				img(src="img/logo.svg", alt="")
+
+			// menu
+			//- .menu--left .menu--right
+			.js-menu.menu.menu--right
+				#menu-btn.menu__btn.hamburger.hamburger--squeeze
+					.hamburger-box
+						.hamburger-inner
+				nav.menu__nav
+					ul.menu__list
+						li
+							a(href="#") Вакансии
+						li
+							a(href="#") Наша игра
+						li
+							a(href="#") История
+						li
+							a(href="#") Контакты
+					ul.menu__lang 
+						li.active RU
+						li EN
+					.btn.btn--fill ОТПРАВИТЬ РЕЗЮМЕ
+					#menu-close.menu__close
+				#menu-over.menu__over
+			// /menu
+
+// /header

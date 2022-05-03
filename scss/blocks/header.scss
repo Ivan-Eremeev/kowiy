@@ -1,0 +1,15 @@
+.header {
+  padding: 23px 0;
+  background-color: $color_text;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1520px + $offset * 2;
+  }
+  @media (max-width: $break_sm) {
+    .wrapper {
+      max-width: 1520px+$offset-sm * 2;
+    }
+  }
+}
