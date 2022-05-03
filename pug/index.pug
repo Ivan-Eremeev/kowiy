@@ -22,7 +22,27 @@ block content
 		
 		.content
 
-			
+			// welcome 
+			.welcome 
+				.welcome__bg 
+					img(src="img/welcome_bg.jpg", alt="")
+				.welcome__cube-1
+					img(src="img/cube.svg", alt="").js-parallaxMouse
+				.welcome__cube-2
+					img(src="img/cube.svg", alt="").js-parallaxMouse
+				.welcome__cube-3
+					img(src="img/cube.svg", alt="").js-parallaxMouse
+				.welcome__cube-4
+					img(src="img/cube.svg", alt="").js-parallaxMouse(data-revers="true")
+				.wrapper 
+					.welcome__content 
+						.welcome__logo 
+							img(src="img/logo_welcome.svg", alt="")
+						.welcome__title делаем игру с любовью
+						.welcome__buttons 
+							a(href="#").btn.btn--fill ЧТО ЗА ИГРА?
+							.btn.btn--border Написать нам
+			//	/welcome 
 
 		include blocks/footer.pug
 

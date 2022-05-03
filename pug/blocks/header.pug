@@ -7,10 +7,7 @@ header.header#header
 
 			// menu
 			//- .menu--left .menu--right
-			.js-menu.menu.menu--right
-				#menu-btn.menu__btn.hamburger.hamburger--squeeze
-					.hamburger-box
-						.hamburger-inner
+			.menu.menu--right#menu
 				nav.menu__nav
 					ul.menu__list
 						li
@@ -25,8 +22,10 @@ header.header#header
 						li.active RU
 						li EN
 					.btn.btn--fill ОТПРАВИТЬ РЕЗЮМЕ
-					#menu-close.menu__close
-				#menu-over.menu__over
+				#menu-over.menu__over.js-menu-close(data-drop="menu")
 			// /menu
+
+			.header__btn.js-menu-btn(data-drop="menu")
+				.header__btn-inner
 
 // /header

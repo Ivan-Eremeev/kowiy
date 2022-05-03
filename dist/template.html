@@ -15,12 +15,7 @@
 			<header class="header" id="header">
 				<div class="wrapper"><a class="header__logo" href="index.html"> <img src="img/logo.svg" alt=""></a>
 					<!-- menu-->
-					<div class="js-menu menu menu--right">
-						<div class="menu__btn hamburger hamburger--squeeze" id="menu-btn">
-							<div class="hamburger-box">
-								<div class="hamburger-inner"></div>
-							</div>
-						</div>
+					<div class="menu menu--right" id="menu">
 						<nav class="menu__nav">
 							<ul class="menu__list">
 								<li><a href="#">Вакансии</a></li>
@@ -33,11 +28,13 @@
 								<li>EN</li>
 							</ul>
 							<div class="btn btn--fill">ОТПРАВИТЬ РЕЗЮМЕ</div>
-							<div class="menu__close" id="menu-close"></div>
 						</nav>
-						<div class="menu__over" id="menu-over"></div>
+						<div class="menu__over js-menu-close" id="menu-over" data-drop="menu"></div>
 					</div>
 					<!-- /menu-->
+					<div class="header__btn js-menu-btn" data-drop="menu">
+						<div class="header__btn-inner"></div>
+					</div>
 				</div>
 			</header>
 			<!-- /header-->

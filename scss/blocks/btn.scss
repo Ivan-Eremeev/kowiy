@@ -10,11 +10,19 @@
   cursor: pointer;
   user-select: none;
   transition: 0.2s;
+  text-align: center;
+  text-transform: uppercase;
   &--fill {
     background-color: $color_primary;
     color: #fff;
     &:hover {
       background-color: $color_secondary;
+    }
+  }
+  &--border {
+    border: 2px solid rgba(24, 24, 24, 0.2);
+    &:hover {
+      border-color: $color_secondary;
     }
   }
 }

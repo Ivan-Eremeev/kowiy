@@ -24,7 +24,7 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.6;
   &.lock {
-    position: fixed;
+    overflow: hidden;
   }
 }
 .mobile-hide {
@@ -76,8 +76,13 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .content {
   flex-grow: 1;
+  // padding-top: 100px;
+  // @media (max-width: $break_md) {
+  //   padding-top: 49px;
+  // }
 }
 /* /settings */

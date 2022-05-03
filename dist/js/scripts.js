@@ -375,65 +375,65 @@ $(document).ready(function () {
 	// };
 	// rotate();
 
-	// // Паралакс относительно курсора мыши
-	// function parallaxMove(parallax) {
-	// 	if (parallax.length) {
-	// 		parallax.each(function () {
-	// 			var $window = $(window),
-	// 				$this = $(this),
-	// 				direction = $this.data('direction'),
-	// 				intensity = $this.data('intensity'),
-	// 				speed = $this.data('speed'),
-	// 				revers = $this.data('revers');
-	// 			if (!direction) {
-	// 				direction = 'xy';
-	// 			}
-	// 			if (!intensity) {
-	// 				intensity = 3;
-	// 			}
-	// 			if (!speed) {
-	// 				speed = 100;
-	// 			}
-	// 			if (!revers) {
-	// 				revers = false;
-	// 			}
-	// 			$this.css({ transition: (speed / 1000) + 's' });
-	// 			$window.mousemove(function (event) {
-	// 				var left = event.clientX,
-	// 					top = event.clientY,
-	// 					windowWidth = $window.width(),
-	// 					windowHeight = $window.height();
-	// 				if (revers) {
-	// 					moveX = ((left - windowWidth / 2) * intensity / 100 * -1).toFixed(),
-	// 						moveY = ((top - windowHeight / 2) * intensity / 100 * -1).toFixed();
-	// 				} else {
-	// 					moveX = ((left - windowWidth / 2) * intensity / 100).toFixed(),
-	// 						moveY = ((top - windowHeight / 2) * intensity / 100).toFixed();
-	// 				}
-	// 				inVisible($this);
-	// 				function inVisible(element) {
-	// 					var topScroll = $(document).scrollTop(),
-	// 						screenHeight = $(window).height(),
-	// 						bottomScroll = topScroll + screenHeight,
-	// 						elementHeight = element.height(),
-	// 						elementTop = element.offset().top,
-	// 						elementBottom = elementTop + elementHeight;
-	// 					if (elementTop < bottomScroll && elementBottom > topScroll) {
-	// 						if (direction == 'xy') {
-	// 							$this.css({ transform: 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)' });
-	// 						}
-	// 						else if (direction == 'x') {
-	// 							$this.css({ transform: 'translateX(' + moveX + 'px)' });
-	// 						}
-	// 						else if (direction == 'y') {
-	// 							$this.css({ transform: 'translateY(' + moveY + 'px)' });
-	// 						}
-	// 					}
-	// 				};
-	// 			});
-	// 		});
-	// 	}
-	// };
+	// Паралакс относительно курсора мыши
+	function parallaxMove(parallax) {
+		if (parallax.length) {
+			parallax.each(function () {
+				var $window = $(window),
+					$this = $(this),
+					direction = $this.data('direction'),
+					intensity = $this.data('intensity'),
+					speed = $this.data('speed'),
+					revers = $this.data('revers');
+				if (!direction) {
+					direction = 'xy';
+				}
+				if (!intensity) {
+					intensity = 3;
+				}
+				if (!speed) {
+					speed = 100;
+				}
+				if (!revers) {
+					revers = false;
+				}
+				$this.css({ transition: (speed / 1000) + 's' });
+				$window.mousemove(function (event) {
+					var left = event.clientX,
+						top = event.clientY,
+						windowWidth = $window.width(),
+						windowHeight = $window.height();
+					if (revers) {
+						moveX = ((left - windowWidth / 2) * intensity / 100 * -1).toFixed(),
+							moveY = ((top - windowHeight / 2) * intensity / 100 * -1).toFixed();
+					} else {
+						moveX = ((left - windowWidth / 2) * intensity / 100).toFixed(),
+							moveY = ((top - windowHeight / 2) * intensity / 100).toFixed();
+					}
+					inVisible($this);
+					function inVisible(element) {
+						var topScroll = $(document).scrollTop(),
+							screenHeight = $(window).height(),
+							bottomScroll = topScroll + screenHeight,
+							elementHeight = element.height(),
+							elementTop = element.offset().top,
+							elementBottom = elementTop + elementHeight;
+						if (elementTop < bottomScroll && elementBottom > topScroll) {
+							if (direction == 'xy') {
+								$this.css({ transform: 'translateX(' + moveX + 'px) translateY(' + moveY + 'px)' });
+							}
+							else if (direction == 'x') {
+								$this.css({ transform: 'translateX(' + moveX + 'px)' });
+							}
+							else if (direction == 'y') {
+								$this.css({ transform: 'translateY(' + moveY + 'px)' });
+							}
+						}
+					};
+				});
+			});
+		}
+	};
 	// parallaxMove($('.js-parallaxMouse'));
 
 	// // Показать еще новости
@@ -659,34 +659,64 @@ $(document).ready(function () {
 	// }
 	// hideListItems();
 
-	// // Выпадайки при клике по кнопке
-	// // Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
-	// // Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
-	// function dropBlock(btn) {
-	// 	var $this = undefined,
-	// 			drop = undefined,
-	// 			close = $('.js-drop-close');
-	// 	btn.on('click', function () {
-	// 		$this = $(this);
-	// 		drop = $('#' + $this.data('drop'));
-	// 		$this.toggleClass('is-active');
-	// 		drop.toggleClass('open');
-	// 		$(document).mouseup(function (e) {
-	// 			if (!$this.is(e.target)
-	// 				&& $this.has(e.target).length === 0
-	// 				&& !drop.is(e.target)
-	// 				&& drop.has(e.target).length === 0) {
-	// 				$this.removeClass('is-active');
-	// 				drop.removeClass('open');
-	// 			}
-	// 		});
-	// 	})
-	// 	close.on('click', function () {
-	// 		$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
-	// 		$('#' + $(this).data('drop')).removeClass('open');
-	// 	})
-	// }
-	// dropBlock($('.js-drop-btn'));
+	// Выпадайки при клике по кнопке
+	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
+	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
+	function dropBlock(btn) {
+		var $this = undefined,
+				drop = undefined,
+				close = $('.js-drop-close');
+		btn.on('click', function () {
+			$this = $(this);
+			drop = $('#' + $this.data('drop'));
+			$this.toggleClass('active');
+			drop.toggleClass('open');
+			$(document).mouseup(function (e) {
+				if (!$this.is(e.target)
+					&& $this.has(e.target).length === 0
+					&& !drop.is(e.target)
+					&& drop.has(e.target).length === 0) {
+					$this.removeClass('active');
+					drop.removeClass('open');
+				}
+			});
+		})
+		close.on('click', function () {
+			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('active');
+			$('#' + $(this).data('drop')).removeClass('open');
+		})
+	}
+	dropBlock($('.js-drop-btn'));
+
+	// Меню
+	function dropBlock(btn) {
+		var $this = undefined,
+			drop = undefined,
+			close = $('.js-menu-close'),
+			body = $('body');
+		btn.on('click', function () {
+			$this = $(this);
+			drop = $('#' + $this.data('drop'));
+			$this.toggleClass('active');
+			drop.toggleClass('open');
+			body.toggleClass('lock');
+			$(document).mouseup(function (e) {
+				if (!$this.is(e.target)
+					&& $this.has(e.target).length === 0
+					&& !drop.is(e.target)
+					&& drop.has(e.target).length === 0) {
+					$this.removeClass('active');
+					drop.removeClass('open');
+					body.removeClass('lock');
+				}
+			});
+		})
+		close.on('click', function () {
+			$('[data-drop="' + $(this).data('drop') + '"]').removeClass('active');
+			$('#' + $(this).data('drop')).removeClass('open');
+		})
+	}
+	dropBlock($('.js-menu-btn'));
 
 	// // JQuery Slider // Ползунок
 	// function JQuerySlider() {
