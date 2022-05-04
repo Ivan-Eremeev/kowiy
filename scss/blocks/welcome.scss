@@ -1,6 +1,10 @@
 .welcome {
-  padding: 20.0625em 0 18.9em;
+  // padding: 20.0625em 0 18.9em;
+  display: flex;
+  align-items: center;
+  padding: 12em 0 9em;
   position: relative;
+  min-height: 100vh;
   .wrapper {
     display: flex;
     justify-content: center;
@@ -22,6 +26,8 @@
   }
   &__content {
     text-align: center;
+    position: relative;
+    z-index: 2;
   }
   &__logo {
     width: 46.5em;
@@ -71,7 +77,7 @@
     transform: rotate(45deg);
   }
   @media (max-width: $break_sm) {
-    padding: 25em 0 18.5em;
+    // padding: 25em 0 18.5em;
     &__bg {
       top: 45%;
       img {

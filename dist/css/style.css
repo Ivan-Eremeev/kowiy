@@ -593,8 +593,15 @@ body.lock {
 }
 
 .welcome {
-  padding: 20.0625em 0 18.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12em 0 9em;
   position: relative;
+  min-height: 100vh;
 }
 .welcome .wrapper {
   display: -webkit-box;
@@ -625,6 +632,8 @@ body.lock {
 }
 .welcome__content {
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 .welcome__logo {
   width: 46.5em;
@@ -684,9 +693,6 @@ body.lock {
   transform: rotate(45deg);
 }
 @media (max-width: 769px) {
-  .welcome {
-    padding: 25em 0 18.5em;
-  }
   .welcome__bg {
     top: 45%;
   }
@@ -805,16 +811,6 @@ body.lock {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-.vacancies__item:hover {
-  background-color: #181818;
-  border-color: #181818;
-  color: #fff;
-}
-.vacancies__item:hover .btn {
-  background-color: #F05634;
-  border-color: #F05634;
-  color: #fff;
-}
 .vacancies__place {
   font-size: 1em;
   font-weight: 600;
@@ -848,9 +844,21 @@ body.lock {
   flex-grow: 1;
   margin-bottom: 2em;
 }
-.vacancies__btn .btn:hover {
-  background-color: #FF8A00;
-  border-color: #FF8A00;
+@media (min-width: 770px) {
+  .vacancies__item:hover {
+    background-color: #181818;
+    border-color: #181818;
+    color: #fff;
+  }
+  .vacancies__item:hover .btn {
+    background-color: #F05634;
+    border-color: #F05634;
+    color: #fff;
+  }
+  .vacancies__item:hover .btn:hover {
+    background-color: #FF8A00;
+    border-color: #FF8A00;
+  }
 }
 @media (max-width: 769px) {
   .vacancies {
@@ -874,6 +882,20 @@ body.lock {
     margin-bottom: 1.25em;
     padding-right: 2.9em;
     overflow: visible;
+  }
+  .vacancies__slider .swiper-slide-active .vacancies__item {
+    background-color: #181818;
+    border-color: #181818;
+    color: #fff;
+  }
+  .vacancies__slider .swiper-slide-active .vacancies__item .btn {
+    background-color: #F05634;
+    border-color: #F05634;
+    color: #fff;
+  }
+  .vacancies__slider .swiper-slide-active .vacancies__item .btn:hover {
+    background-color: #FF8A00;
+    border-color: #FF8A00;
   }
   .vacancies__arrows {
     display: none;

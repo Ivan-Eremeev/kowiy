@@ -50,16 +50,6 @@
     border: 0.125em solid rgba(24, 24, 24, 0.2);
     border-radius: 0.75em;
     transition: 0.2s;
-    &:hover {
-      background-color: $color_text;
-      border-color: $color_text;
-      color: #fff;
-      .btn {
-        background-color: $color_primary;
-        border-color: $color_primary;
-        color: #fff;
-      }
-    }
   }
   &__place {
     font-size: 1em;
@@ -91,9 +81,24 @@
   }
   &__btn {
     .btn {
+      
+    }
+  }
+  @media (min-width: $break_sm + 1) {
+    &__item {
       &:hover {
-        background-color: $color_secondary;
-        border-color: $color_secondary;
+        background-color: $color_text;
+        border-color: $color_text;
+        color: #fff;
+        .btn {
+          background-color: $color_primary;
+          border-color: $color_primary;
+          color: #fff;
+          &:hover {
+            background-color: $color_secondary;
+            border-color: $color_secondary;
+          }
+        }
       }
     }
   }
@@ -117,6 +122,22 @@
       margin-bottom: 1.25em;
       padding-right: 2.9em;
       overflow: visible;
+      .swiper-slide-active {
+        .vacancies__item {
+          background-color: $color_text;
+          border-color: $color_text;
+          color: #fff;
+          .btn {
+            background-color: $color_primary;
+            border-color: $color_primary;
+            color: #fff;
+            &:hover {
+              background-color: $color_secondary;
+              border-color: $color_secondary;
+            }
+          }
+        }
+      }
     }
     &__arrows {
       display: none;
