@@ -1,17 +1,18 @@
 .vacancies {
-  padding: 63px 0 150px;
+  padding: 3.9375em 0 9.375em;
   &__head {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 40px;
+    margin-bottom: 2.6em;
   }
   &__arrows {
     display: flex;
   }
   &__arrow {
+    width: 1.6875em;
     position: static;
-    margin-left: 40px;
+    margin-left: 2.5em;
     svg {
       fill: $color_primary;
       transition: 0.2s;
@@ -34,19 +35,20 @@
   }
   &__slider {
     overflow: hidden;
-    margin-bottom: 36px;
+    margin-bottom: 2.25em;
     .swiper-slide {
       height: auto;
+      margin-right: 1.25em;
     }
   }
   &__item {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 40px 30px;
+    padding: 2.5em 1.875em;
     background-color: #fff;
-    border: 2px solid rgba(24, 24, 24, 0.2);
-    border-radius: 12px;
+    border: 0.125em solid rgba(24, 24, 24, 0.2);
+    border-radius: 0.75em;
     transition: 0.2s;
     &:hover {
       background-color: $color_text;
@@ -60,32 +62,32 @@
     }
   }
   &__place {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 1.875em;
     ul {
       display: flex;
       flex-wrap: wrap;
-      margin-left: -12px;
-      margin-top: -12px;
+      margin-left: -0.75em;
+      margin-top: -0.75em;
       li {
-        padding: 6px 13px 6px 15px;
-        margin-left: 12px;
-        margin-top: 12px;
-        border: 2px solid $color_secondary;
-        border-radius: 40px;
+        padding: 0.375em 0.8125em 0.375em 0.9375em;
+        margin-left: 0.75em;
+        margin-top: 0.75em;
+        border: 0.125em solid $color_secondary;
+        border-radius: 2.5em;
       }
     }
   }
   &__title {
     font-family: "ST-SimpleSquare", sans-serif;
+    font-size: 1.5em;
     line-height: 1.4;
-    margin-bottom: 9px;
+    margin-bottom: 0.5625em;
   }
   &__text {
-    font-size: 16px;
-    margin-bottom: 40px;
     flex-grow: 1;
+    margin-bottom: 2em;
   }
   &__btn {
     .btn {
@@ -95,49 +97,29 @@
       }
     }
   }
-  @media (max-width: $break_md) {
-    &__item {
-      padding: 25px 15px;
-    }
-    &__title {
-      font-size: 18px;
-    }
-    &__text {
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-    &__place {
-      font-size: 12px;
-      margin-bottom: 20px;
-    }
-  }
   @media (max-width: $break_sm) {
-    padding: 39px 0 30px;
+    padding: 3.2em 0 2.7em;
     &__head {
-      margin-bottom: 15px;
+      margin-bottom: 1.5em;
     }
     &__place {
-      font-size: 10px;
-      margin-bottom: 14px;
+      font-size: 1em;
+      margin-bottom: 1.3em;
     }
     &__title {
-      font-size: 16px;
+      font-size: 1.5em;
     }
     &__text {
-      font-size: 12px;
+      font-size: 1.12em;
+      margin-bottom: 1.6em;
     }
     &__slider {
-      margin-bottom: 20px;
+      margin-bottom: 1.25em;
+      padding-right: 2.9em;
+      overflow: visible;
     }
-  }
-  @media (max-width: $break_xs) {
     &__arrows {
       display: none;
-    }
-    &__slider {
-      padding-right: 30px;
-      overflow: visible;
-      margin-bottom: 16px;
     }
     &__btn {
       .btn {

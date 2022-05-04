@@ -1,71 +1,76 @@
 .about {
-  padding: 118px 0 135px;
+  padding: 7.375em 0 8.4375em;
   background: linear-gradient(180deg, rgba(172, 240, 255, 0) 28.12%, #ACF0FF 98.6%);
   text-align: center;
   position: relative;
   &__content {
-    max-width: 550px;
+    max-width: 34.375em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
   .title {
-    font-size: 48px;
-    margin-bottom: 24px;
+    font-size: 3em;
+    margin-bottom: 0.55em;
   }
   &__sub {
+    font-size: 1.5em;
     font-weight: 500;
-    margin-bottom: 57px;
+    margin-bottom: 2.1em;
   }
   &__buttons {
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 1.5625em;
   }
   &__btn {
-    margin: 0 9px;
-    border-radius: 50px;
+    width: 13.8em;
+    margin: 0 0.5625em;
+    border-radius: 3.125em;
     img {
+      width: 100%;
       display: block;
     }
     &:hover {
-      transform: translate(0,-1px);
-      box-shadow: 0 5px 20px rgba(0,0,0,.3);
+      transform: translate(0, -0.0625em);
+      box-shadow: 0 0.3125em 1.25em rgba(0,0,0,.3);
     }
   }
   &__text {
-    max-width: 400px;
+    max-width: 25em;
     margin-left: auto;
     margin-right: auto;
-    font-size: 16px;
     line-height: 1.4;
   }
   &__img {
-    margin-top: -73px;
-    margin-bottom: 23px;
+    width: 80em;
+    margin-top: -4.5625em;
+    margin-bottom: 1.4375em;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     z-index: 2;
   }
   &__cube-1 {
-    width: 220px;
+    width: 13.75em;
     position: absolute;
     top: 23%;
     left: 3%;
     transform: rotate(265deg);
   }
   &__cube-2 {
-    width: 320px;
+    width: 20em;
     position: absolute;
-    top: 100px;
+    top: 6.25em;
     right: 4%;
     transform: rotate(88deg);
   }
   &__cube-3 {
-    width: 250px;
+    width: 15.625em;
     position: absolute;
     bottom: 22%;
-    right: -68px;
+    right: -4.25em;
     transform: rotate(46deg);
   }
   &__cube-4 {
@@ -75,76 +80,59 @@
     position: relative;
     z-index: 2;
   }
-  @media (max-width: $break_lg) {
-    padding: 30px 0 44px;
-    &__cube-1 {
-      top: 20%;
-      left: -20px;
-    }
-    &__cube-2 {
-      width: 250px;
-      top: -20px;
-      right: -40px;
-    }
-    &__cube-3 {
-      bottom: -50px;
-    }
-  }
   @media (max-width: $break_sm) {
+    padding: 2.6em 0 3.7em;
     .title {
-      font-size: 24px;
-      margin-bottom: 16px;
+      font-size: 2.2em;
+      margin-bottom: 0.7em;
     }
     &__sub {
-      font-size: 14px;
-      margin-bottom: 28px;
+      font-size: 1.3em;
+      margin-bottom: 1.9em;
+    }
+    &__buttons {
+      flex-wrap: wrap;
+      margin-bottom: 0.2em;
+    }
+    &__btn {
+      width: 20em;
+      margin-bottom: 1.4em;
     }
     &__text {
-      font-size: 10px;
-      margin-bottom: 22px;
+      font-size: 1em;
+      margin-bottom: 2em;
     }
     &__img {
+      width: 100%;
       margin-top: 0;
+      margin-bottom: 3.2em;
     }
     &__cube-1 {
-      width: 68px;
+      width: 6.25em;
       transform: rotate(48deg);
       top: 18%;
-      left: -30px;
+      left: -2.875em;
     }
     &__cube-2 {
-      width: 110px;
+      width: 9.875em;
       top: 17%;
-      right: -70px;
+      right: -6.375em;
       transform: rotate(0deg);
     }
     &__cube-3 {
-      width: 98px;
-      right: 10px;
+      width: 9.125em;
+      right: 1.625em;
       transform: rotate(-102deg);
       right: 1px;
-      bottom: -27px;
+      bottom: -2.3em;
     }
     &__cube-4 {
       display: block;
-      width: 140px;
+      width: 12.75em;
       position: absolute;
-      left: -30px;
+      left: -2.875em;
       bottom: 19%;
       transform: rotate(-40deg);
-    }
-  }
-  @media (max-width: $break_xs) {
-    &__buttons {
-      flex-wrap: wrap;
-      margin-bottom: 3px;
-    }
-    &__btn {
-      margin-bottom: 14px;
-    }
-    &__img {
-      margin-left: -10px;
-      margin-right: -10px;
     }
   }
 }

@@ -1,37 +1,34 @@
 .features {
-  font-size: 24px;
   &__col {
     @include col(4);
-    @include col-sm(6);
-    @include col-xs(12);
+    @include col-sm(12);
   }
   &__item {
     height: 100%;
-    padding: 38px 45px 45px;
-    border: 2px solid $color_text;
+    padding: 2.375em 2.8125em 2.8125em;
+    border: 0.125em solid $color_text;
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: 0.75em;
     text-align: center;
   }
   &__title {
     font-family: "ST-SimpleSquare", sans-serif;
-    margin-bottom: 4px;
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
   }
   &__text {
+    font-size: 1.5em;
     font-weight: 500;
   }
-  @media (max-width: $break_md) {
-    &__item {
-      padding: 20px 10px;
-      font-size: 18px;
-    }
-  }
   @media (max-width: $break_sm) {
+    &__item {
+      padding: 1.9em 5em;
+    }
     &__title {
-      font-size: 16px;
+      font-size: 1.5em;
     }
     &__text {
-      font-size: 14px;
+      font-size: 1.3em;
     }
   }
 }
