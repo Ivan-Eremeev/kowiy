@@ -1,0 +1,71 @@
+.vacancy {
+  padding: 13.0625em 0 4.1875em;
+  .wrapper {
+    max-width: 98.75em;
+  }
+  &__row {
+    display: flex;
+  }
+  &__content {
+    width: 33.75em;
+    margin-right: 4.875em;
+    flex-shrink: 0;
+    .btn {
+
+    } 
+  }
+  &__name {
+    font-family: "ST-SimpleSquare",
+    sans-serif;
+    font-size: 1.5em;
+    color: $color_secondary;
+    margin-bottom: 0.45em;
+  }
+  &__title {
+    width: 9em;
+    font-family: "ST-SimpleSquare",
+    sans-serif;
+    font-size: 3em;
+    line-height: 1.4;
+    margin-bottom: 0.56em;
+  }
+  &__text {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 1.1em;
+  }
+  &__img {
+    margin-top: 2.5em;
+  }
+  @media (max-width: $break_sm) {
+    padding: 6em 0 4.7em;
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__content {
+      width: 100%;
+      order: 1;
+      text-align: center;
+      .btn {
+        width: 14em;
+      }
+    }
+    &__img {
+      margin-top: 0;
+      margin-bottom: 1.8em;
+    }
+    &__name {
+      font-size: 1.85em;
+      margin-bottom: 0.3em;
+    }
+    &__title {
+      width: 100%;
+      font-size: 2em;
+      margin-bottom: 0.8em;
+    }
+    &__text {
+      font-size: 1.3em;
+      margin-bottom: 1.4em;
+    }
+  }
+}

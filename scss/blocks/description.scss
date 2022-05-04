@@ -1,0 +1,57 @@
+.description {
+  padding: 5.375em 0 6.2em;
+  background: linear-gradient(to top, rgba(242, 255, 204, 0) 42.74%, #ECFFB7 98.6%);
+  .wrapper {
+    max-width: 98.75em;
+  }
+  &__container {
+    max-width: 63.75em;
+  }
+  &__container-sub {
+    max-width: 54.375em;
+  }
+  &__title {
+    font-family: "ST-SimpleSquare",
+    sans-serif;
+    font-size: 3em;
+    line-height: 1.4;
+    margin-bottom: 0.6em;
+  }
+  &__text {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 1.7em;
+  }
+  &__subtitle {
+    font-family: "ST-SimpleSquare",
+    sans-serif;
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin-bottom: 0.3em;
+  }
+  &__subtext {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 0.8em;
+  }
+  @media (max-width: $break_sm) {
+    padding: 3.6em 0 3.5em;
+    &__title {
+      font-size: 2.1em;
+      margin-bottom: 0.85em;
+    }
+    &__text {
+      font-size: 1.27em;
+      margin-bottom: 2.2em;
+      p {
+        display: inline;
+      }
+    }
+    &__subtitle {
+      margin-bottom: 0.55em;
+    }
+    &__subtext {
+      font-size: 1.25em;
+    }
+  }
+}
