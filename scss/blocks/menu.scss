@@ -5,19 +5,18 @@
 		align-items: center;
 		transition: .5s;
 		.btn {
-			margin-left: 30px;
+			margin-left: 1.875em;
 		}
 	}
 	&__list {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 16px;
 		font-weight: 600;
 		text-transform: uppercase;
-		margin-left: -42px;
+		margin-left: -2.625em;
 		li {
-			margin-left: 42px;
+			margin-left: 2.625em;
 		}
 		a {
 			display: block;
@@ -34,14 +33,14 @@
 	}
 	&__lang {
 		display: flex;
-		margin-left: 80px;
-		font-size: 16px;
+		margin-left: 5em;
+		font-size: 1em;
 		font-weight: 600;
 		color: #A3A3A3;
 		li {
 			cursor: pointer;
 			user-select: none;
-			margin-left: 10px;
+			margin-left: 0.625em;
 			&.active {
 				color: $color_primary;
 			}
@@ -50,47 +49,38 @@
 			}
 		}
 	}
-	@media (max-width: $break_lg) {
-		&__list {
-			margin-left: -20px;
-			li {
-				margin-left: 20px;
-			}
-		}
-		&__lang {
-			margin-left: 30px;
-		}
-	}
-	@media (max-width: $break_md) {
+	@media (max-width: $break_sm) {
 		height: 100%;
 		&__nav {
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: stretch;
 			width: 100%;
-			max-width: 270px;
-			padding: 30px 24px;
+			max-width: 23em;
+			padding: 2em 1.7em;
 			background-color: #fff;
 			position: fixed;
-			top: 49px;
+			top: 4.4em;
 			bottom: 0;
-			overflow-y: auto;
 			z-index: 20;
-			box-shadow: 0 10px 20px rgba(0,0,0,.2);
+			box-shadow: 0 0.625em 1.25em rgba(0,0,0,.2);
 			.btn {
-				padding: 14px 19px;
+				font-size: 1.2em;
+				padding: 0.875em 1.1875em;
 				margin-left: 0;
 			}
 		}
 		&__list {
 			display: block;
-			margin-top: -30px;
+			margin-top: -1.875em;
+			overflow-y: auto;
 			li {
-				margin-top: 30px;
+				margin-top: 1.875em;
 			}
 			a {
 				margin: 0;
 				color: #747474;
+				font-size: 1.4em;
 				&.active {
 					color: $color_text;
 				}
@@ -98,12 +88,15 @@
 		}
 		&__lang {
 			position: absolute;
-			top: 30px;
-			right: 24px;
+			top: 1.875em;
+			right: 1.5em;
+			li {
+				font-size: 1.4em;
+			}
 		}
 		&__over {
 			position: fixed;
-			top: 49px;
+			top: 4.4em;
 			bottom: 0;
 			left: 0;
 			right: 0;
@@ -115,7 +108,7 @@
 		}
 		&--left {
 			.menu__nav {
-				left: -800px;
+				left: -50em;
 			}
 			&.open {
 				.menu__nav {
@@ -129,7 +122,7 @@
 		}
 		&--right {
 			.menu__nav {
-				right: -800px;
+				right: -50em;
 			}
 			&.open {
 				.menu__nav {

@@ -1,5 +1,5 @@
 .welcome {
-  padding: 321px 0 306px;
+  padding: 20.0625em 0 18.9em;
   position: relative;
   .wrapper {
     display: flex;
@@ -24,97 +24,95 @@
     text-align: center;
   }
   &__logo {
-    margin-bottom: 34px;
+    width: 46.5em;
+    margin-bottom: 2.125em;
     img {
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
     }
   }
   &__title {
     font-family: "ST-SimpleSquare", sans-serif;
-    font-size: 36px;
-    margin-bottom: 11px;
+    font-size: 2.25em;
+    margin-bottom: 0.25em;
   }
   &__buttons {
     display: flex;
     justify-content: center;
     .btn {
-      margin: 0 8px;
+      margin: 0 0.5em;
     }
   }
   &__cube-1 {
-    width: 395px;
+    width: 24.6875em;
     position: absolute;
-    top: -160px;
+    top: -10em;
     left: -0.3%;
   }
   &__cube-2 {
-    width: 184px;
+    width: 11.5em;
     position: absolute;
-    top: 36px;
+    top: 2.25em;
     right: 8%;
     transform: rotate(257deg);
   }
   &__cube-3 {
-    width: 186px;
+    width: 11.625em;
     position: absolute;
-    bottom: 50px;
+    bottom: 3.125em;
     left: 20%;
     transform: rotate(45deg);
   }
   &__cube-4 {
-    width: 291px;
+    width: 18.1875em;
     position: absolute;
-    bottom: -90px;
+    bottom: -5.625em;
     right: 19%;
     transform: rotate(45deg);
   }
-  @media (max-width: $break_md) {
-    &__cube-1 {
-      width: 200px;
-      top: 40px;
-    }
-    &__cube-2 {
-      width: 150px;
-    }
-    &__cube-4 {
-      display: none;
-    }
-  }
   @media (max-width: $break_sm) {
-    padding: 272px 0 203px;
+    padding: 25em 0 18.5em;
+    &__bg {
+      top: 45%;
+      img {
+        object-position: bottom right;
+      }
+    }
     &__cube-1 {
-      width: 70px;
-      top: 60px;
+      width: 6.375em;
+      top: 5.75em;
       left: 6%;
       transform: rotate(300deg);
     }
     &__cube-2 {
-      width: 123px;
+      width: 10.6875em;
       transform: rotate(-1deg);
-      top: 45px;
-      right: -74px;
+      top: 4.8125em;
+      right: -5.625em;
     }
     &__cube-3 {
-      width: 140px;
+      width: 12.75em;
       transform: rotate(-45deg);
       left: 0;
-      bottom: -37px;
+      bottom: -2.3125em;
+    }
+    &__cube-4 {
+      display: none;
     }
     &__logo {
-      margin-bottom: 67px;
+      width: 24.5em;
+      margin-bottom: 6.1875em;
     }
     &__title {
-      font-size: 16px;
-      margin-bottom: 6px;
+      font-size: 1.47em;
+      margin-bottom: 0.375em;
     }
     &__buttons {
       .btn {
         flex: 1 0 auto;
-        margin: 0 7px;
-        padding: 8px 15px;
-        font-size: 11px;
+        // margin: 0 0.4375em;
+        // padding: 0.5em 0.9375em;
+        font-size: 1em;
       }
     }
   }

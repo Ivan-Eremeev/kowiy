@@ -10,21 +10,22 @@ button,
 input,
 textarea {
   font-family: "SF UI Display", sans-serif;
-  font-size: 24px;
   color: $color_text;
-  letter-spacing: 0.02em;
 }
 body {
   height: 100%;
   min-width: 319px;
   background-color: #fff;
   font-family: "SF UI Display", sans-serif;
-  font-size: 24px;
+  font-size: calc(.034 * 100vw + 0px);
   color: $color_text;
   letter-spacing: 0.02em;
   line-height: 1.6;
   &.lock {
     overflow: hidden;
+  }
+  @media (min-width: $break_sm + 1px) {
+    font-size: calc(.00838 * 100vw + 0px);
   }
 }
 .mobile-hide {
@@ -35,28 +36,6 @@ body {
 .mobile-visible {
   @media (min-width: $break_sm + 1) {
     display: none !important;
-  }
-}
-.img-responsive {
-  position: relative;
-  overflow: hidden;
-  img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  svg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  &:after {
-    content: '';
-    display: block;
-    padding-top: 56.25%;
   }
 }
 .row {
@@ -93,13 +72,13 @@ body {
 }
 .title {
   font-family: "ST-SimpleSquare", sans-serif;
-  font-size: 36px;
+  font-size: 2.25em;
   line-height: 1.4;
   span {
     color: $color_secondary;
   }
   @media (max-width: $break_sm) {
-    font-size: 20px;
+    font-size: 1.25em;
   }
 }
 /* /settings */
