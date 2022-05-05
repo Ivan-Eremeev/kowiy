@@ -32,10 +32,10 @@ block content
 								img(src="img/logo_welcome.svg", alt="")
 						h1.welcome__title делаем игру с любовью
 						.welcome__buttons 
-							a(href="#").btn.btn--fill ЧТО ЗА ИГРА?
-							a(href="vacancy.html").btn.btn--border Написать нам
+							a(href="#about").btn.btn--fill ЧТО ЗА ИГРА?
+							.btn.btn--border.modal-trigger(data-modal="#callback") Написать нам
 
-			section.vacancies
+			section.vacancies#vacancies
 				.wrapper 
 
 					.vacancies__head 
@@ -64,7 +64,7 @@ block content
 									.vacancies__title Level Designer
 									.vacancies__text Мы ищем ещё одного гейм-дизайнера, которому сможем полностью доверить создание новых захватывающих экспедиций. Вашу работу увидит весь мир - ответственное и волнительное дело. Готовы создавать целые миры?
 									.vacancies__btn 
-										a(href="vacancy.html").btn.btn--border ХОЧУ РАБОТАТЬ
+										a(href="vacancy-level_designer.html").btn.btn--border ХОЧУ РАБОТАТЬ
 							.swiper-slide 
 								.vacancies__item 
 									.vacancies__place
@@ -73,7 +73,7 @@ block content
 									.vacancies__title Data Engineer
 									.vacancies__text Vы стремимся к тому, чтобы аналитика была неотъемлемой частью всех наших процессови являлась опорой для принятия важных для компании решений. Именно поэтомумы ищем крутого Data Engineer! 
 									.vacancies__btn 
-										a(href="vacancy.html").btn.btn--border ХОЧУ РАБОТАТЬ
+										a(href="vacancy-data_engineer.html").btn.btn--border ХОЧУ РАБОТАТЬ
 							.swiper-slide 
 								.vacancies__item 
 									.vacancies__place
@@ -82,7 +82,7 @@ block content
 									.vacancies__title TechOps Engineer
 									.vacancies__text Можешь найти ошибку там, где её никто не видит? Одно твоё слово останавливает панику, когда двести человек кричат «всё упало, помогите»? Если это про тебя — ты прирождённый TechOps-инженер.
 									.vacancies__btn 
-										a(href="vacancy.html").btn.btn--border ХОЧУ РАБОТАТЬ
+										a(href="vacancy-techops_engineer.html").btn.btn--border ХОЧУ РАБОТАТЬ
 							.swiper-slide 
 								.vacancies__item 
 									.vacancies__place
@@ -91,7 +91,7 @@ block content
 									.vacancies__title TechOps Engineer
 									.vacancies__text Можешь найти ошибку там, где её никто не видит? Одно твоё слово останавливает панику, когда двести человек кричат «всё упало, помогите»? Если это про тебя — ты прирождённый TechOps-инженер.
 									.vacancies__btn 
-										a(href="vacancy.html").btn.btn--border ХОЧУ РАБОТАТЬ
+										a(href="vacancy-techops_engineer.html").btn.btn--border ХОЧУ РАБОТАТЬ
 
 					.features
 						.row.gy
@@ -108,7 +108,7 @@ block content
 									.features__title Награда
 									.features__text Вся команда пожинает плоды кропотливого труда
 
-			section.about
+			section.about#about
 
 				.about__cube-1 
 					img(src="img/cube.svg", alt="").js-parallaxMouse(data-speed="1000") 
@@ -150,7 +150,7 @@ block content
 									.features__title Графика
 									.features__text Приятная и стильная графика в твоём телефоне
 
-			section.path 
+			section.path#path
 				.wrapper 
 					.path__row 
 						.path__col 
@@ -185,4 +185,7 @@ block content
 							.path__img 
 								img(src="img/success.png", alt="")
 
+
 		include blocks/footer.pug
+
+	include blocks/callback.pug

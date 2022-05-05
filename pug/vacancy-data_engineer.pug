@@ -1,0 +1,53 @@
+extends blocks/base.pug
+
+block title 
+	title Главная
+
+block content
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+
+			section.vacancy 
+				.wrapper 
+					.vacancy__row 
+						.vacancy__content 
+							.vacancy__name вакансия
+							h1.vacancy__title Data Engineer
+							.vacancy__text Мы ищем ведущего гейм-дизайнера с опытом создания игровых фич. Как ведущий гейм-дизайнер, вы будете отвечать за фичи, которые увидят миллионы игроков. Вы сможете быстро развиваться в гейм-дизайне и продюсировании.
+							.btn.btn--fill.modal-trigger(data-modal="#callback") откликнуться
+						.vacancy__img 
+							img(src="img/team.png", alt="")
+
+			section.description 
+				.wrapper 
+					.description__container
+						h2.description__title Задачи
+						.description__text 
+							p Написание концептов и ТЗ новых фич своей команды;
+							p Ответственность за качество реализуемых фичей совместно с менеджером команды. 
+							p Умение видеть проблемы в интерфейсах, балансе, общей логике фичи;
+							p Анализ результатов фич совместно с продюсером проекта.
+						h2.description__title ожидания
+						.description__text 
+							p Опыт создания фичей или событий в роли гейм-дизайнера;
+							p Системное мышление, умение грамотно формулировать и доносить свои мысли устно и письменно.
+					.description__container-sub
+						h2.description__title Мы предлагаем
+						h3.description__subtitle Комфортные условия
+						.description__subtext Работайте там, где удобно: удаленно, в офисе или совмещайте форматы. Без согласований и трекинга рабочих часов.
+						h3.description__subtitle Заботу о здоровье
+						.description__subtext Компенсируем онлайн-сессии с психологом, открываем  для вас и ваших детей ДМС со стоматологией и лечением от COVID-19. Организуем вакцинацию для тех, кому это важно.
+						h3.description__subtitle Развитие и обучение
+						.description__subtext Оплачиваем участие в профильных конференциях и курсах, регулярно проводим внутренние буткемпы и стажировки. А для личного развития предлагаем доступ к тысячам книг в онлайн-библиотеке и скидки на курсы английского языка.
+						h3.description__subtitle Формат работы
+						.description__subtext Удаленно, или офис в Москве и Дубае
+
+
+		include blocks/footer.pug
+
+	include blocks/callback.pug
+	

@@ -62,6 +62,9 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  &.blur {
+    filter: blur(1em);
+  }
 }
 .content {
   flex-grow: 1;

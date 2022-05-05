@@ -8,17 +8,17 @@ header.header#header
 				nav.menu__nav
 					ul.menu__list
 						li
-							a(href="#") Вакансии
+							a(href="#vacancies") Вакансии
 						li
-							a(href="#") Наша игра
+							a(href="#about") Наша игра
 						li
-							a(href="#") История
+							a(href="#path") История
 						li
-							a(href="#") Контакты
+							a(href="#contacts") Контакты
 					ul.menu__lang 
 						li.active RU
 						li EN
-					.btn.btn--fill ОТПРАВИТЬ РЕЗЮМЕ
+					.btn.btn--fill.modal-trigger(data-modal="#callback") ОТПРАВИТЬ РЕЗЮМЕ
 				#menu-over.menu__over.js-menu-close(data-drop="menu")
 
 			.header__btn.js-menu-btn(data-drop="menu")

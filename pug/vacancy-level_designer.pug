@@ -18,7 +18,7 @@ block content
 							.vacancy__name вакансия
 							h1.vacancy__title level designer
 							.vacancy__text Мы ищем ведущего гейм-дизайнера с опытом создания игровых фич. Как ведущий гейм-дизайнер, вы будете отвечать за фичи, которые увидят миллионы игроков. Вы сможете быстро развиваться в гейм-дизайне и продюсировании.
-							.btn.btn--fill откликнуться
+							.btn.btn--fill.modal-trigger(data-modal="#callback") откликнуться
 						.vacancy__img 
 							img(src="img/team.png", alt="")
 
@@ -48,3 +48,6 @@ block content
 
 
 		include blocks/footer.pug
+
+	include blocks/callback.pug
+	

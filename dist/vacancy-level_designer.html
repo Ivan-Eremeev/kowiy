@@ -17,16 +17,16 @@
 					<div class="menu menu--right" id="menu">
 						<nav class="menu__nav">
 							<ul class="menu__list">
-								<li><a href="#">Вакансии</a></li>
-								<li><a href="#">Наша игра</a></li>
-								<li><a href="#">История</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a href="#vacancies">Вакансии</a></li>
+								<li><a href="#about">Наша игра</a></li>
+								<li><a href="#path">История</a></li>
+								<li><a href="#contacts">Контакты</a></li>
 							</ul>
 							<ul class="menu__lang"> 
 								<li class="active">RU</li>
 								<li>EN</li>
 							</ul>
-							<div class="btn btn--fill">ОТПРАВИТЬ РЕЗЮМЕ</div>
+							<div class="btn btn--fill modal-trigger" data-modal="#callback">ОТПРАВИТЬ РЕЗЮМЕ</div>
 						</nav>
 						<div class="menu__over js-menu-close" id="menu-over" data-drop="menu"></div>
 					</div>
@@ -43,7 +43,7 @@
 								<div class="vacancy__name">вакансия</div>
 								<h1 class="vacancy__title">level designer</h1>
 								<div class="vacancy__text">Мы ищем ведущего гейм-дизайнера с опытом создания игровых фич. Как ведущий гейм-дизайнер, вы будете отвечать за фичи, которые увидят миллионы игроков. Вы сможете быстро развиваться в гейм-дизайне и продюсировании.</div>
-								<div class="btn btn--fill">откликнуться</div>
+								<div class="btn btn--fill modal-trigger" data-modal="#callback">откликнуться</div>
 							</div>
 							<div class="vacancy__img"> <img src="img/team.png" alt=""></div>
 						</div>
@@ -79,21 +79,21 @@
 					</div>
 				</section>
 			</div>
-			<footer class="footer"> 
+			<footer class="footer" id="contacts">
 				<div class="wrapper"> 
 					<div class="footer__top"> <a class="footer__logo" href="#"> <img src="img/logo.svg" alt=""></a>
 						<nav class="footer__menu"> 
 							<ul class="footer__list"> 
-								<li> <a href="#">Вакансии</a></li>
-								<li> <a href="#">Наша игра</a></li>
-								<li> <a href="#">История</a></li>
-								<li> <a href="#">Контакты</a></li>
+								<li><a href="#vacancies">Вакансии</a></li>
+								<li><a href="#about">Наша игра</a></li>
+								<li><a href="#path">История</a></li>
+								<li><a href="#contacts">Контакты</a></li>
 							</ul>
 							<ul class="footer__lang"> 
 								<li class="active">RU</li>
 								<li>EN</li>
 							</ul>
-							<div class="btn btn--fill">ОТПРАВИТЬ РЕЗЮМЕ</div>
+							<div class="btn btn--fill modal-trigger" data-modal="#callback">ОТПРАВИТЬ РЕЗЮМЕ</div>
 						</nav>
 					</div>
 					<div class="footer__bottom"> 
@@ -116,6 +116,54 @@
 					</div>
 				</div>
 			</footer>
+		</div>
+		<div class="callback modal" id="callback">
+			<div class="callback__body modal_body">
+				<form class="callback__content modal_content" action="#">
+					<div class="callback__title">отклик <br>на вакансию</div>
+					<div class="row gy">
+						<div class="callback__col-half"> 
+							<div class="input"> 
+								<input type="text" placeholder="Фамилия и имя" name="name" required>
+							</div>
+						</div>
+						<div class="callback__col-half"> 
+							<div class="input"> 
+								<input type="text" placeholder="Вакансия" name="vacancy" required>
+							</div>
+						</div>
+						<div class="callback__col-half"> 
+							<div class="input"> 
+								<input type="text" placeholder="номер телефона" name="tel" required>
+							</div>
+						</div>
+						<div class="callback__col-half"> 
+							<div class="input"> 
+								<input type="text" placeholder="Электронная почта" name="email" required>
+							</div>
+						</div>
+						<div class="callback__col-half"> 
+							<div class="input"> 
+								<input type="text" placeholder="из какого вы города" name="city" required>
+							</div>
+						</div>
+						<div class="callback__col-half"> 
+							<div class="input"> 
+								<input type="text" placeholder="зарплатные ожидания" name="salary" required>
+							</div>
+						</div>
+						<div class="callback__col-full"> 
+							<div class="input"> 
+								<textarea placeholder="Коротко расскажите о себе и добавьте ссылки на портфолио"></textarea>
+							</div>
+						</div>
+						<div class="callback__col-full"> 
+							<button class="btn btn--fill" type="submit">отправить</button>
+						</div>
+					</div>
+					<div class="callback__close modal_close"></div>
+				</form>
+			</div>
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
 		<script src="js/libs/swiper-bundle.min.js"> </script>

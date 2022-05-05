@@ -223,6 +223,10 @@ body.lock {
   flex-direction: column;
   overflow: hidden;
 }
+.page.blur {
+  -webkit-filter: blur(1em);
+  filter: blur(1em);
+}
 
 .content {
   -webkit-box-flex: 1;
@@ -274,6 +278,7 @@ body.lock {
 .btn--fill {
   background-color: #F05634;
   color: #fff;
+  border: none;
 }
 .btn--fill:hover {
   background-color: #FF8A00;
@@ -288,6 +293,134 @@ body.lock {
   .btn {
     padding: 0.75em 1.5em;
     font-size: 1.5em;
+  }
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  overflow: auto;
+}
+.modal_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 1.25em;
+  position: absolute;
+}
+.modal-content, .modal_content {
+  max-width: 37.5em;
+  padding: 1.25em;
+  position: relative;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+  -ms-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.modal_close {
+  width: 1.875em;
+  height: 1.875em;
+  position: absolute;
+  top: 1.875em;
+  right: 1.875em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.modal_close:after, .modal_close:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 0.0625em;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.modal_close:after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal_close:before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+.modal.open .modal_content {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+@media (max-width: 769px) {
+  .modal_close {
+    width: 3em;
+    height: 3em;
+    top: 1em;
+    right: 1em;
+  }
+  .modal_close:after, .modal_close:before {
+    height: 0.1em;
+  }
+}
+
+.input input {
+  width: 100%;
+  height: 3.25em;
+  padding: 0 1.5em;
+  border: 0.125em solid rgba(24, 24, 24, 0.2);
+  border-radius: 0.625em;
+  font-weight: 600;
+  outline: none;
+  text-transform: uppercase;
+}
+.input textarea {
+  display: block;
+  width: 100%;
+  height: 6.5em;
+  padding: 1em 1.5em;
+  border: 0.125em solid rgba(24, 24, 24, 0.2);
+  border-radius: 0.625em;
+  font-weight: 600;
+  outline: none;
+  text-transform: uppercase;
+  resize: none;
+}
+@media (max-width: 769px) {
+  .input input {
+    height: 4em;
+  }
+  .input textarea {
+    height: 10em;
   }
 }
 
@@ -472,11 +605,11 @@ body.lock {
   position: relative;
   white-space: nowrap;
 }
-.menu__list a.active {
-  color: #fff;
-}
 .menu__list a:hover {
   color: #FF8A00;
+}
+.menu__list a.active {
+  color: #fff;
 }
 .menu__lang {
   display: -webkit-box;
@@ -1587,5 +1720,52 @@ body.lock {
   }
   .description__subtext {
     font-size: 1.25em;
+  }
+}
+
+.callback {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.callback__content {
+  max-width: 66.25em;
+  padding: 2.5em;
+  background: #FFFFFF;
+  border: 0.125em solid #181818;
+  border-radius: 0.75em;
+}
+.callback__col-half {
+  width: 50%;
+}
+@media screen and (max-width: 769px) {
+  .callback__col-half {
+    width: 100%;
+  }
+}
+.callback__col-full {
+  width: 100%;
+}
+.callback__title {
+  font-family: "ST-SimpleSquare", sans-serif;
+  font-size: 2.25em;
+  line-height: 1.4;
+  margin-bottom: 0.7em;
+}
+@media (max-width: 769px) {
+  .callback .row {
+    margin-top: -8px;
+  }
+  .callback .row > * {
+    padding-top: 8px;
+  }
+  .callback__content {
+    padding: 20px 16px;
+  }
+  .callback__title {
+    font-size: 1.5em;
+  }
+  .callback .btn {
+    width: 100%;
+    height: 3.1em;
+    margin-top: 1em;
   }
 }

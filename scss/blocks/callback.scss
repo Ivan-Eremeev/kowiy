@@ -1,0 +1,48 @@
+.callback {
+  background-color: rgba(255,255,255,.3);
+  &__body {
+  }
+  &__content {
+    max-width: 66.25em;
+    padding: 2.5em;
+    background: #FFFFFF;
+    border: 0.125em solid #181818;
+    border-radius: 0.75em;
+  }
+  &__close {
+    
+  }
+  &__col-half {
+    @include col(6);
+    @include col-sm(12);
+  }
+  &__col-full {
+    @include col(12);
+  }
+  &__title {
+    font-family: "ST-SimpleSquare",
+    sans-serif;
+    font-size: 2.25em;
+    line-height: 1.4;
+    margin-bottom: 0.7em;
+  }
+  @media (max-width: $break_sm) {
+    .row {
+      margin-top: -8px;
+      > * {
+        padding-top: 8px;
+      }
+    }
+    &__content {
+      padding: 20px 16px;
+    }
+    &__title {
+      font-size: 1.5em;
+    }
+    .btn {
+      width: 100%;
+      height: 3.1em;
+      margin-top: 1em;
+    }
+  }
+}

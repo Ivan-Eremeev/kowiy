@@ -77,19 +77,25 @@ $(document).ready(function () {
 	// };
 	// screenHeight($('.js-fullHeight'));
 
-	// // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
-	// function menuScroll(menuItem) {
-	// 	menuItem.find('a[href^="#"]').click( function(){
-	// 		var scroll_el = $(this).attr('href'),
-	// 				time = 500;
-	// 		if ($(scroll_el).length != 0) {
-	// 		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, time);
-	// 			$(this).addClass('active');
-	// 		}
-	// 		return false;
-	// 	});
-	// };
-	// menuScroll();
+	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
+	function menuScroll() {
+		var btn = $('a[href^="#"]');
+		btn.click( function(){
+			var scroll_el = $(this).attr('href'),
+					time = 500,
+					menu = $('#menu'),
+					btnMenu = $('[data-drop="menu"]');
+			if ($(scroll_el).length != 0) {
+			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 50 }, time);
+				btn.removeClass('active');
+				$(this).addClass('active');
+				menu.removeClass('open');
+				btnMenu.removeClass('active');
+			}
+			return false;
+		});
+	};
+	menuScroll();
 
 	// Stiky menu // Липкое меню.
 	function stikyMenu(header) {
@@ -176,43 +182,40 @@ $(document).ready(function () {
 	// }
 	// accordion();
 
-	// // Модальное окно
-	// function modal(modal) {
-	// 	$('.modal-trigger').on('click', function() {
-	// 		var $this = $(this),
-	// 				data = $this.data('modal'),
-	// 				thisModal = $(data);
-	// 		modalShow(thisModal);
-	// 	});
-	// };
-	// // Открытие модального окна
-	// function modalShow(thisModal) {
-	// 	var html = $('html'),
-	// 			modalClose = thisModal.find($('.modal_close')),
-	// 			documentWidth = parseInt(document.documentElement.clientWidth),
-	// 			windowsWidth = parseInt(window.innerWidth),
-	// 			scrollbarWidth = windowsWidth - documentWidth;
-	// 	thisModal.show(0, function() {
-	// 		setTimeout(thisModal.addClass('open'),500);
-	// 	});
-	// 	html.addClass('lock').css('padding-right',scrollbarWidth);
-	// 	modalClose.on('click', function() {
-	// 		modalHide(thisModal);
-	// 	});
-	// 	thisModal.on('click', function(e) {
-	// 		if (thisModal.has(e.target).length === 0) {
-	// 			modalHide(thisModal);
-	// 		}
-	// 	});
-	// };
-	// // Закрытие модального окна
-	// function modalHide(thisModal) {
-	// 	var html = $('html');
-	// 	thisModal.removeClass('open');
-	// 	thisModal.hide();
-	// 	html.removeClass('lock').css('padding-right',0);
-	// };
-	// modal();
+	// Модальное окно
+	const body = $('body');
+	const page = $('.page');
+	function modal(modal) {
+		$('.modal-trigger').on('click', function(e) {
+			e.preventDefault();
+			var $this = $(this),
+					data = $this.data('modal'),
+					thisModal = $(data);
+			modalShow(thisModal);
+		});
+	};
+	// Открытие модального окна
+	function modalShow(thisModal) {
+		var modalClose = thisModal.find($('.modal_close'));
+		thisModal.addClass('open');
+		body.addClass('lock');
+		page.addClass('blur');
+		modalClose.on('click', function() {
+			modalHide(thisModal);
+		});
+		thisModal.on('click', function(e) {
+			if (thisModal.find('.modal_body').has(e.target).length === 0) {
+				modalHide(thisModal);
+			}
+		});
+	};
+	// Закрытие модального окна
+	function modalHide(thisModal) {
+		thisModal.removeClass('open');
+		body.removeClass('lock');
+		page.removeClass('blur');
+	};
+	modal();
 
 	// // Текст печатная машинка
 	// function textPrint(block) {
@@ -263,41 +266,41 @@ $(document).ready(function () {
 	// };
 	// countNumber($(".count-number"));
 
-	// // Делает активным пункт меню при скролле до блока
-	// function menuItemActive(menu) {
-	// 	var lastId,
-	// 	topMenu = menu,
-	// 	topMenuHeight = topMenu.outerHeight(),
-	// 	menuItems = topMenu.find("a"),
-	// 	scrollItems = menuItems.map(function(){
-	// 		var item = $($(this).attr("href"));
-	// 		if (item.length) { return item; }
-	// 	});
-	// 	menuItems.click(function(e){
-	// 		var href = $(this).attr("href"),
-	// 				offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-	// 		$('html, body').stop().animate({ 
-	// 				scrollTop: offsetTop
-	// 		}, 300);
-	// 		e.preventDefault();
-	// 	});
-	// 	$(window).scroll(function(){
-	// 		var fromTop = $(this).scrollTop()+topMenuHeight;
-	// 		var cur = scrollItems.map(function(){
-	// 			if ($(this).offset().top < fromTop)
-	// 				return this;
-	// 		});
-	// 		cur = cur[cur.length-1];
-	// 		var id = cur && cur.length ? cur[0].id : "";
-	// 		if (lastId !== id) {
-	// 				lastId = id;
-	// 				menuItems
-	// 					.parent().removeClass("active")
-	// 					.end().filter("[href='#"+id+"']").parent().addClass("active");
-	// 		}                   
-	// 	});
-	// };
-	// menuItemActive();
+	// Делает активным пункт меню при скролле до блока
+	function menuItemActive(menu) {
+		var lastId,
+		topMenu = menu,
+		topMenuHeight = topMenu.outerHeight(),
+		menuItems = topMenu.find("a"),
+		scrollItems = menuItems.map(function(){
+			var item = $($(this).attr("href"));
+			if (item.length) { return item; }
+		});
+		menuItems.click(function(e){
+			var href = $(this).attr("href"),
+					offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+			$('html, body').stop().animate({ 
+					scrollTop: offsetTop
+			}, 300);
+			e.preventDefault();
+		});
+		$(window).scroll(function(){
+			var fromTop = $(this).scrollTop()+topMenuHeight;
+			var cur = scrollItems.map(function(){
+				if ($(this).offset().top < fromTop)
+					return this;
+			});
+			cur = cur[cur.length-1];
+			var id = cur && cur.length ? cur[0].id : "";
+			if (lastId !== id) {
+					lastId = id;
+					menuItems
+						.removeClass("active")
+						.filter("[href='#"+id+"']").addClass("active");
+			}                   
+		});
+	};
+	menuItemActive($('#menu'));
 
 	// // Изменение textarea при получении фокуса
 	// function focusTextarea(texarea) {
@@ -689,7 +692,7 @@ $(document).ready(function () {
 	// dropBlock($('.js-drop-btn'));
 
 	// Меню
-	function dropBlock(btn) {
+	function dropMenu(btn) {
 		var $this = undefined,
 			drop = undefined,
 			close = $('.js-menu-close'),
@@ -717,7 +720,7 @@ $(document).ready(function () {
 			body.removeClass('lock');
 		})
 	}
-	dropBlock($('.js-menu-btn'));
+	dropMenu($('.js-menu-btn'));
 
 	// // JQuery Slider // Ползунок
 	// function JQuerySlider() {

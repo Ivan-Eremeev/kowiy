@@ -1,0 +1,29 @@
+.callback.modal#callback
+  .callback__body.modal_body
+    form(action="#").callback__content.modal_content
+      .callback__title отклик <br>на вакансию
+      .row.gy
+        .callback__col-half 
+          .input 
+            input(type="text" placeholder="Фамилия и имя" name="name" required)
+        .callback__col-half 
+          .input 
+            input(type="text" placeholder="Вакансия" name="vacancy" required)
+        .callback__col-half 
+          .input 
+            input(type="text" placeholder="номер телефона" name="tel" required)
+        .callback__col-half 
+          .input 
+            input(type="text" placeholder="Электронная почта" name="email" required)
+        .callback__col-half 
+          .input 
+            input(type="text" placeholder="из какого вы города" name="city" required)
+        .callback__col-half 
+          .input 
+            input(type="text" placeholder="зарплатные ожидания" name="salary" required)
+        .callback__col-full 
+          .input 
+            textarea(placeholder="Коротко расскажите о себе и добавьте ссылки на портфолио")
+        .callback__col-full 
+          button(type="submit").btn.btn--fill отправить
+      .callback__close.modal_close

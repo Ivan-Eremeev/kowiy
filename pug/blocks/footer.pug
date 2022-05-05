@@ -1,4 +1,4 @@
-footer.footer 
+footer.footer#contacts
 	.wrapper 
 
 		.footer__top 
@@ -8,20 +8,20 @@ footer.footer
 
 			nav.footer__menu 
 				ul.footer__list 
-					li 
-						a(href="#") Вакансии
-					li 
-						a(href="#") Наша игра
-					li 
-						a(href="#") История
-					li 
-						a(href="#") Контакты
+					li
+						a(href="#vacancies") Вакансии
+					li
+						a(href="#about") Наша игра
+					li
+						a(href="#path") История
+					li
+						a(href="#contacts") Контакты
 
 				ul.footer__lang 
 					li.active RU
 					li EN
 
-				.btn.btn--fill ОТПРАВИТЬ РЕЗЮМЕ
+				.btn.btn--fill.modal-trigger(data-modal="#callback") ОТПРАВИТЬ РЕЗЮМЕ
 
 		.footer__bottom 
 

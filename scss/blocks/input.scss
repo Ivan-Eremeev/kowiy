@@ -1,0 +1,32 @@
+.input {
+  input {
+    width: 100%;
+    height: 3.25em;
+    padding: 0 1.5em;
+    border: 0.125em solid rgba(24, 24, 24, 0.2);
+    border-radius: 0.625em;
+    font-weight: 600;
+    outline: none;
+    text-transform: uppercase;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    height: 6.5em;
+    padding: 1em 1.5em;
+    border: 0.125em solid rgba(24, 24, 24, 0.2);
+    border-radius: 0.625em;
+    font-weight: 600;
+    outline: none;
+    text-transform: uppercase;
+    resize: none;
+  }
+  @media (max-width: $break_sm) {
+    input {
+      height: 4em;
+    }
+    textarea {
+      height: 10em;
+    }
+  }
+}

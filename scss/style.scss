@@ -70,6 +70,8 @@ $color_secondary: #FF8A00;
 // Подключение файлов
 @import 'blocks/settings';
 @import 'blocks/btn';
+@import 'blocks/modal';
+@import 'blocks/input';
 // @import 'hamburgers/hamburgers';
 @import 'blocks/header';
 @import 'blocks/menu';
@@ -81,7 +83,7 @@ $color_secondary: #FF8A00;
 @import 'blocks/footer';
 @import 'blocks/vacancy';
 @import 'blocks/description';
+@import 'blocks/callback';
 // @import 'blocks/accordion';
-// @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';
 // @import 'blocks/tabs';

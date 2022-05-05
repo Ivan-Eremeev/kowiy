@@ -23,11 +23,11 @@
 			color: #A3A3A3;
 			position: relative;
 			white-space: nowrap;
-			&.active {
-				color: #fff;
-			}
 			&:hover {
 				color: $color_secondary;
+			}
+			&.active {
+				color: #fff;
 			}
 		}
 	}
