@@ -87,7 +87,7 @@ $(document).ready(function () {
 		btn.click( function(){
 			var scroll_el = $(this).attr('href');
 			if ($(scroll_el).length != 0) {
-			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 50 }, time);
+			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 70 }, time);
 				btn.removeClass('active');
 				$(this).addClass('active');
 				menu.removeClass('open');
