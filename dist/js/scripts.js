@@ -79,18 +79,20 @@ $(document).ready(function () {
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
 	function menuScroll() {
-		var btn = $('a[href^="#"]');
+		var btn = $('a[href^="#"]'),
+				time = 500,
+				menu = $('#menu'),
+				btnMenu = $('[data-drop="menu"]'),
+				body = $('body');
 		btn.click( function(){
-			var scroll_el = $(this).attr('href'),
-					time = 500,
-					menu = $('#menu'),
-					btnMenu = $('[data-drop="menu"]');
+			var scroll_el = $(this).attr('href');
 			if ($(scroll_el).length != 0) {
 			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 50 }, time);
 				btn.removeClass('active');
 				$(this).addClass('active');
 				menu.removeClass('open');
 				btnMenu.removeClass('active');
+				body.removeClass('lock');
 			}
 			return false;
 		});
