@@ -789,4 +789,35 @@ $(document).ready(function () {
 		}
 	});
 
+	function translate() {
+		var string = $('[data-translate]');
+		var btn = $('[data-lang');
+		var btnEn = $('[data-lang="en"]');
+		var btnRu = $('[data-lang="ru"]');
+		btn.on('click', function () {
+			if (!$(this).hasClass('active') && $(this).data('lang') == 'ru') {
+				btnEn.removeClass('active');
+				btnRu.addClass('active');
+				string.each(function () {
+					dataToText($(this));
+				})
+			} else if (!$(this).hasClass('active') && $(this).data('lang') == 'en') {
+				btnRu.removeClass('active');
+				btnEn.addClass('active');
+				string.each(function () {
+					dataToText($(this));
+				})
+			} else {
+				return false;
+			}
+		})
+		function dataToText(element) {
+			var data = element.data('translate');
+			var text = element.text();
+			element.text(data);
+			element.data('translate', text);
+		}
+	}
+	translate();
+
 });
