@@ -285,6 +285,7 @@ body.lock {
 }
 .btn--border {
   border: 2px solid rgba(24, 24, 24, 0.2);
+  color: #181818;
 }
 .btn--border:hover {
   border-color: #FF8A00;
