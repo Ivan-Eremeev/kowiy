@@ -2,7 +2,7 @@
 $spam = $_POST['spam']; // текст из поля спам
 if (empty($spam)) { // Проверка на спам
   if ((isset($_POST['name']) && $_POST['vacancy'] && $_POST['tel'] && $_POST['email'] && $_POST['city'] && $_POST['salary'] != "")) { //Проверка отправилось ли наше поля name и не пустые ли они
-    $to = 'ivan.eremeev@yandex.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
+    $to = 'craft-mc@mail.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
     $subject = 'Резюме';
     $message = '
     <html>

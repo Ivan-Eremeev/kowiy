@@ -90,7 +90,7 @@ $(document).ready(function () {
 		});
 		menuItems.click(function(e){
 			var href = $(this).attr("href"),
-					offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+					offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight - 100;
 			$('html, body').stop().animate({ 
 					scrollTop: offsetTop
 			}, 300);
@@ -99,7 +99,7 @@ $(document).ready(function () {
 		$(window).scroll(function(){
 			var fromTop = $(this).scrollTop()+topMenuHeight;
 			var cur = scrollItems.map(function(){
-				if ($(this).offset().top < fromTop)
+				if ($(this).offset().top < fromTop + 101)
 					return this;
 			});
 			cur = cur[cur.length-1];
