@@ -1,29 +1,29 @@
 .callback.modal#callback
   .callback__body.modal_body
     form(action="#").callback__content.modal_content
-      .callback__title отклик <br>на вакансию
+      .callback__title(data-translate="Response to a job") отклик <br>на вакансию
       .row.gy
         .callback__col-half 
           .input 
-            input(type="text" placeholder="Фамилия и имя" name="name" required)
+            input(type="text" placeholder="Фамилия и имя" name="name" required data-translate="Last name and first name")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="Вакансия" name="vacancy" required)
+            input(type="text" placeholder="Вакансия" name="vacancy" required data-translate="Vacancy")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="номер телефона" name="tel" required)
+            input(type="text" placeholder="номер телефона" name="tel" required data-translate="Phone number")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="Электронная почта" name="email" required)
+            input(type="text" placeholder="Электронная почта" name="email" required data-translate="Email")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="из какого вы города" name="city" required)
+            input(type="text" placeholder="из какого вы города" name="city" required data-translate="What city are you from")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="зарплатные ожидания" name="salary" required)
+            input(type="text" placeholder="зарплатные ожидания" name="salary" required data-translate="Salary expectations")
         .callback__col-full 
           .input 
-            textarea(placeholder="Коротко расскажите о себе и добавьте ссылки на портфолио")
+            textarea(placeholder="Коротко расскажите о себе и добавьте ссылки на портфолио" data-translate="Tell us about yourself")
         .callback__col-full 
-          button(type="submit").btn.btn--fill отправить
+          button(type="submit").btn.btn--fill(data-translate="Send") отправить
       .callback__close.modal_close

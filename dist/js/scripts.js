@@ -22,10 +22,10 @@ $(document).ready(function () {
 	// libs-settings/google-map-settings.js
 	// mailto-ajax.js
 
-	// Запрет перехода по ссылкам с хэшем
-	$('a[href="#"]').click(function(e) {
-		e.preventDefault();
-	});
+	// // Запрет перехода по ссылкам с хэшем
+	// $('a[href="#"]').click(function(e) {
+	// 	e.preventDefault();
+	// });
 
 	// Мобильное меню
 	// function myMenu(menu) {
@@ -87,7 +87,7 @@ $(document).ready(function () {
 		btn.click( function(){
 			var scroll_el = $(this).attr('href');
 			if ($(scroll_el).length != 0) {
-			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 70 }, time);
+			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 100 }, time);
 				btn.removeClass('active');
 				$(this).addClass('active');
 				menu.removeClass('open');
@@ -102,13 +102,17 @@ $(document).ready(function () {
 	// Stiky menu // Липкое меню.
 	function stikyMenu(header) {
 		headerTop = header.offset().top;
+		init();
 		$(window).scroll(function(){
-			if( $(window).scrollTop() > headerTop + 150) {
+			init();
+		});
+		function init() {
+			if ($(window).scrollTop() > headerTop + 150) {
 				header.addClass('stiky');
 			} else if ($(window).scrollTop() < headerTop + 5) {
 				header.removeClass('stiky');
 			}
-		});
+		}
 	};
 	stikyMenu($('#header'));
 
@@ -799,13 +803,21 @@ $(document).ready(function () {
 				btnEn.removeClass('active');
 				btnRu.addClass('active');
 				string.each(function () {
-					dataToText($(this));
+					if ($(this).parent().hasClass('input')) {
+						dataToPlaceholder($(this));
+					} else {
+						dataToText($(this));
+					}
 				})
 			} else if (!$(this).hasClass('active') && $(this).data('lang') == 'en') {
 				btnRu.removeClass('active');
 				btnEn.addClass('active');
 				string.each(function () {
-					dataToText($(this));
+					if ($(this).parent().hasClass('input')) {
+						dataToPlaceholder($(this));
+					} else {
+						dataToText($(this));
+					}
 				})
 			} else {
 				return false;
@@ -813,9 +825,15 @@ $(document).ready(function () {
 		})
 		function dataToText(element) {
 			var data = element.data('translate');
-			var text = element.text();
-			element.text(data);
+			var text = element.html();
+			element.html(data);
 			element.data('translate', text);
+		}
+		function dataToPlaceholder(element) {
+			var data = element.data('translate');
+			var placeholder = element.attr('placeholder');
+			element.attr('placeholder', data);
+			element.data('translate', placeholder);
 		}
 	}
 	translate();
