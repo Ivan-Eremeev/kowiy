@@ -1,29 +1,33 @@
 .callback.modal#callback
   .callback__body.modal_body
-    form(action="#").callback__content.modal_content
+    form(action="send.php" method="post").callback__content.modal_content
       .callback__title(data-translate="Response to a job") отклик <br>на вакансию
       .row.gy
         .callback__col-half 
+          .input.input--hide 
+            input(type="text" name="spam")
           .input 
-            input(type="text" placeholder="Фамилия и имя" name="name" required data-translate="Last name and first name")
+            input(type="text" placeholder="Фамилия и имя" name="name" required data-translate="Last name and first name" maxlength="30")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="Вакансия" name="vacancy" required data-translate="Vacancy")
+            input(type="text" placeholder="Вакансия" name="vacancy" required data-translate="Vacancy" maxlength="30")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="номер телефона" name="tel" required data-translate="Phone number")
+            input(type="text" placeholder="номер телефона" name="tel" required data-translate="Phone number" maxlength="30")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="Электронная почта" name="email" required data-translate="Email")
+            input(type="text" placeholder="Электронная почта" name="email" required data-translate="Email" maxlength="30")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="из какого вы города" name="city" required data-translate="What city are you from")
+            input(type="text" placeholder="из какого вы города" name="city" required data-translate="What city are you from" maxlength="30")
         .callback__col-half 
           .input 
-            input(type="text" placeholder="зарплатные ожидания" name="salary" required data-translate="Salary expectations")
+            input(type="text" placeholder="зарплатные ожидания" name="salary" required data-translate="Salary expectations" maxlength="30")
         .callback__col-full 
           .input 
-            textarea(placeholder="Коротко расскажите о себе и добавьте ссылки на портфолио" data-translate="Tell us about yourself")
+            textarea(placeholder="Коротко расскажите о себе и добавьте ссылки на портфолио" data-translate="Tell us about yourself" name="message")
         .callback__col-full 
           button(type="submit").btn.btn--fill(data-translate="Send") отправить
+      .callback__success(data-translate="Thanks") Спасибо. Мы свяжемся с вами
+      .callback__error(data-translate="Error") Что то пошло не так. Попробуйте еще раз.
       .callback__close.modal_close

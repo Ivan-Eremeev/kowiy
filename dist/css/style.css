@@ -404,6 +404,9 @@ body.lock {
   outline: none;
   text-transform: uppercase;
 }
+.input input.invalid {
+  border-color: red;
+}
 .input textarea {
   display: block;
   width: 100%;
@@ -415,6 +418,12 @@ body.lock {
   outline: none;
   text-transform: uppercase;
   resize: none;
+}
+.input textarea.invalid {
+  border-color: red;
+}
+.input--hide {
+  display: none;
 }
 @media (max-width: 769px) {
   .input input {
@@ -1750,6 +1759,18 @@ body.lock {
   font-size: 2.25em;
   line-height: 1.4;
   margin-bottom: 0.7em;
+}
+.callback__success {
+  font-size: 1.5em;
+  display: none;
+  margin-top: 0.5em;
+  color: green;
+}
+.callback__error {
+  font-size: 1.5em;
+  display: none;
+  margin-top: 0.5em;
+  color: red;
 }
 @media (max-width: 769px) {
   .callback .row {

@@ -37,7 +37,7 @@
 			</header>
 			<div class="content">
 				<section class="welcome"> 
-					<div class="welcome__bg"> <img src="img/welcome_bg.jpg" alt=""></div>
+					<div class="welcome__bg"> <img src="img/welcome_bg.webp" alt=""></div>
 					<div class="welcome__cube-1"><img class="js-parallaxMouse" src="img/cube.svg" alt="" data-speed="1000"></div>
 					<div class="welcome__cube-2"><img class="js-parallaxMouse" src="img/cube.svg" alt="" data-speed="1000"></div>
 					<div class="welcome__cube-3"><img class="js-parallaxMouse" src="img/cube.svg" alt="" data-speed="1000"></div>
@@ -159,10 +159,10 @@
 						<div class="about__content">
 							<h2 class="title" data-translate="Introducing &lt;span&gt;our&lt;/span&gt; Cubix game">Представляем <span>нашу игру </span>Cubix</h2>
 							<div class="about__sub" data-translate="Immerse yourself in a large multiplayer cube world where you will build, fight monsters and make friends">Окунись в большой многопользовательский кубический мир, где ты будешь строить, сражаться с монстрами и находить друзей!</div>
-							<div class="about__buttons"> <a class="about__btn" href="#"> <img src="img/app_store.png" alt=""></a><a class="about__btn" href="#"> <img src="img/google_play.png" alt=""></a></div>
+							<div class="about__buttons"> <a class="about__btn" href="#"> <img src="img/app_store.webp" alt=""></a><a class="about__btn" href="#"> <img src="img/google_play.webp" alt=""></a></div>
 							<div class="about__text" data-translate="By installing the application you accept the user agreement and the offer agreement">Устанавливая приложения вы принимаете пользовательское соглашение и договор офферы.</div>
 						</div>
-						<div class="about__img"> <img src="img/about.png" alt=""></div>
+						<div class="about__img"> <img src="img/about.webp" alt=""></div>
 						<div class="features">
 							<div class="row gy">
 								<div class="features__col"> 
@@ -191,7 +191,7 @@
 					<div class="wrapper"> 
 						<div class="path__row"> 
 							<div class="path__col"> 
-								<div class="path__img"> <img src="img/team.png" alt=""></div>
+								<div class="path__img"> <img src="img/team.webp" alt=""></div>
 							</div>
 							<div class="path__col"> 
 								<div class="path__content">
@@ -208,12 +208,12 @@
 								</div>
 							</div>
 							<div class="path__col"> 
-								<div class="path__img"> <img src="img/start_path.png" alt=""></div>
+								<div class="path__img"> <img src="img/start_path.webp" alt=""></div>
 							</div>
 						</div>
 						<div class="path__row"> 
 							<div class="path__col"> 
-								<div class="path__img"> <img src="img/job.png" alt=""></div>
+								<div class="path__img"> <img src="img/job.webp" alt=""></div>
 							</div>
 							<div class="path__col"> 
 								<div class="path__content">
@@ -230,7 +230,7 @@
 								</div>
 							</div>
 							<div class="path__col"> 
-								<div class="path__img"> <img src="img/success.png" alt=""></div>
+								<div class="path__img"> <img src="img/success.webp" alt=""></div>
 							</div>
 						</div>
 					</div>
@@ -276,48 +276,53 @@
 		</div>
 		<div class="callback modal" id="callback">
 			<div class="callback__body modal_body">
-				<form class="callback__content modal_content" action="#">
+				<form class="callback__content modal_content" action="send.php" method="post">
 					<div class="callback__title" data-translate="Response to a job">отклик <br>на вакансию</div>
 					<div class="row gy">
 						<div class="callback__col-half"> 
+							<div class="input input--hide"> 
+								<input type="text" name="spam">
+							</div>
 							<div class="input"> 
-								<input type="text" placeholder="Фамилия и имя" name="name" required data-translate="Last name and first name">
+								<input type="text" placeholder="Фамилия и имя" name="name" required data-translate="Last name and first name" maxlength="30">
 							</div>
 						</div>
 						<div class="callback__col-half"> 
 							<div class="input"> 
-								<input type="text" placeholder="Вакансия" name="vacancy" required data-translate="Vacancy">
+								<input type="text" placeholder="Вакансия" name="vacancy" required data-translate="Vacancy" maxlength="30">
 							</div>
 						</div>
 						<div class="callback__col-half"> 
 							<div class="input"> 
-								<input type="text" placeholder="номер телефона" name="tel" required data-translate="Phone number">
+								<input type="text" placeholder="номер телефона" name="tel" required data-translate="Phone number" maxlength="30">
 							</div>
 						</div>
 						<div class="callback__col-half"> 
 							<div class="input"> 
-								<input type="text" placeholder="Электронная почта" name="email" required data-translate="Email">
+								<input type="text" placeholder="Электронная почта" name="email" required data-translate="Email" maxlength="30">
 							</div>
 						</div>
 						<div class="callback__col-half"> 
 							<div class="input"> 
-								<input type="text" placeholder="из какого вы города" name="city" required data-translate="What city are you from">
+								<input type="text" placeholder="из какого вы города" name="city" required data-translate="What city are you from" maxlength="30">
 							</div>
 						</div>
 						<div class="callback__col-half"> 
 							<div class="input"> 
-								<input type="text" placeholder="зарплатные ожидания" name="salary" required data-translate="Salary expectations">
+								<input type="text" placeholder="зарплатные ожидания" name="salary" required data-translate="Salary expectations" maxlength="30">
 							</div>
 						</div>
 						<div class="callback__col-full"> 
 							<div class="input"> 
-								<textarea placeholder="Коротко расскажите о себе и добавьте ссылки на портфолио" data-translate="Tell us about yourself"></textarea>
+								<textarea placeholder="Коротко расскажите о себе и добавьте ссылки на портфолио" data-translate="Tell us about yourself" name="message"></textarea>
 							</div>
 						</div>
 						<div class="callback__col-full"> 
 							<button class="btn btn--fill" type="submit" data-translate="Send">отправить</button>
 						</div>
 					</div>
+					<div class="callback__success" data-translate="Thanks">Спасибо. Мы свяжемся с вами</div>
+					<div class="callback__error" data-translate="Error">Что то пошло не так. Попробуйте еще раз.</div>
 					<div class="callback__close modal_close"></div>
 				</form>
 			</div>
@@ -325,5 +330,6 @@
 		<script src="js/libs/jquery.min.js"></script>
 		<script src="js/libs/swiper-bundle.min.js"> </script>
 		<script src="js/scripts.js"></script>
+		<script src="js/mailto-ajax.js"> </script>
 	</body>
 </html>

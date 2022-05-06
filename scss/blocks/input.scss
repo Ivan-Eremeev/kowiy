@@ -8,6 +8,9 @@
     font-weight: 600;
     outline: none;
     text-transform: uppercase;
+    &.invalid {
+      border-color: red;
+    }
   }
   textarea {
     display: block;
@@ -20,6 +23,12 @@
     outline: none;
     text-transform: uppercase;
     resize: none;
+    &.invalid {
+      border-color: red;
+    }
+  }
+  &--hide {
+    display: none;
   }
   @media (max-width: $break_sm) {
     input {

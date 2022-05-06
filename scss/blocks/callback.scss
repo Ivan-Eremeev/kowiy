@@ -26,6 +26,18 @@
     line-height: 1.4;
     margin-bottom: 0.7em;
   }
+  &__success {
+    font-size: 1.5em;
+    display: none;
+    margin-top: 0.5em;
+    color: green;
+  }
+  &__error {
+    font-size: 1.5em;
+    display: none;
+    margin-top: 0.5em;
+    color: red;
+  }
   @media (max-width: $break_sm) {
     .row {
       margin-top: -8px;
