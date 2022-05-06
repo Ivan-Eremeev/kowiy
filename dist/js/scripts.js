@@ -14,7 +14,7 @@ $(document).ready(function () {
 		btn.click( function(){
 			var scroll_el = $(this).attr('href');
 			if ($(scroll_el).length != 0) {
-			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 100 }, time);
+			$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 50 }, time);
 				btn.removeClass('active');
 				$(this).addClass('active');
 				menu.removeClass('open');
@@ -90,7 +90,7 @@ $(document).ready(function () {
 		});
 		menuItems.click(function(e){
 			var href = $(this).attr("href"),
-					offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight - 100;
+					offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight - 50;
 			$('html, body').stop().animate({ 
 					scrollTop: offsetTop
 			}, 300);
@@ -99,7 +99,7 @@ $(document).ready(function () {
 		$(window).scroll(function(){
 			var fromTop = $(this).scrollTop()+topMenuHeight;
 			var cur = scrollItems.map(function(){
-				if ($(this).offset().top < fromTop + 101)
+				if ($(this).offset().top < fromTop + 55)
 					return this;
 			});
 			cur = cur[cur.length-1];
